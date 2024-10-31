@@ -1,0 +1,35 @@
+commit 848fbf3f3049081595184bcd25c19c50082bc77d
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Oct 31 13:59:29 2024 -0600
+
+    Started making progress of animation PNGs
+
+commit 877a39dcd2e3ee65ba278a7cdb931087f96ab91b
+Author: sheepslayer649 <72578693+sheepslayer649@users.noreply.github.com>
+Date:   Thu Sep 19 20:35:26 2024 -0600
+
+    test
+
+commit 28b6281a490d71aa0d57f494fe6ff9effb1597a4
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Sep 12 14:44:30 2024 -0600
+
+    peronal commit
+
+commit b24eaf75ac4b1a3b51a95e028290f962ef33c771
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Sep 12 14:28:31 2024 -0600
+
+    testing
+
+commit 106dd641fb86cbe28d7d7144750f00d9e976710e
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Sep 12 13:37:14 2024 -0600
+
+    This is a testing commit, lets see if gitlog.txt is on there.
+
+commit 946addf163dab3d3e043463ff1363b34006daf0d
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Sep 12 13:14:01 2024 -0600
+
+    Initial commit
