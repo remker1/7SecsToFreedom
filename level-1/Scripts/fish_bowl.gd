@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-
+# currently not working as expected. Should playu a sound if we hit a wall but only once, it does it many times.
 	if is_on_wall():		
 			if not sfx_waterswoosh.playing:				
 					sfx_waterswoosh.play(0.50)
