@@ -1,3 +1,71 @@
+commit e602c604dee12e9dabe5755a83c0978600ea1413
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 15:06:12 2024 -0600
+
+    Work distributed txt file and progress after pitch txt files are created for use.
+
+commit bf84a1dd4d44d6d0cb4b6d0c4803745d3c38eefb
+Author: arehman36 <dpu196@usask.ca>
+Date:   Wed Nov 6 20:35:21 2024 -0600
+
+    Added my godot files for level 1 to git
+
+commit 40239ec4b8f142149b06d1f0499d536810db40ec
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Oct 31 16:11:47 2024 -0600
+
+    Delete .DS_Store
+
+commit 4f7229bc1389c7feaacc12ba888eafe31165a7eb
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Oct 31 16:07:00 2024 -0600
+
+    Fish Idle Animation is done and uploaded into Assets. Fish swim and die are still in progress.
+
+commit 30b71fd229ff77546ebd57bf149b19c1f024cf1e
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Oct 31 16:01:43 2024 -0600
+
+    added gitingore file to ignore DS file.
+
+commit 247c332f7a9595d7db96c8df23504c222b4257e1
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Oct 31 15:54:54 2024 -0600
+
+    Delete .DS_Store
+
+commit 2092e2826624778414741eaba0b382fcf4fd147d
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Oct 31 15:40:17 2024 -0600
+
+            Added two backgrounds
+
+commit f97a73afa93f192b76ac53716f78c1aad7083cb9
+Merge: 15a033f 3897011
+Author: arehman36 <dpu196@usask.ca>
+Date:   Thu Oct 31 15:16:42 2024 -0600
+
+    Merge branch 'main' of https://git.cs.usask.ca/wni817/cmpt306gp into ARBRANCH
+            "Adding Sound folder"
+
+commit 15a033fd77eb472c1de445e0d8e2cb1e46fce5eb
+Author: arehman36 <dpu196@usask.ca>
+Date:   Thu Oct 31 15:08:46 2024 -0600
+
+    added sound files
+
+commit 9283536ee606b0e95d2d5a39de1cd2bb0e3e1e7c
+Author: arehman36 <dpu196@usask.ca>
+Date:   Thu Oct 31 15:02:50 2024 -0600
+
+    added my first file
+
+commit 5dcc9b4fad3f304c7a9225baa1c115e4e60f0b37
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Oct 31 14:53:24 2024 -0600
+
+    deleting unused files.
+
 commit 848fbf3f3049081595184bcd25c19c50082bc77d
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Thu Oct 31 13:59:29 2024 -0600

@@ -68,6 +68,7 @@ animation = &"FishIdle"
 frame_progress = 0.708886
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 scale = Vector2(2.45, 2.45)
 shape = SubResource("CircleShape2D_ld85b")
 
@@ -76,6 +77,8 @@ stream = ExtResource("3_n2fq0")
 
 [node name="sfx_waterswoosh" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_8is26")
-volume_db = -1.0
+volume_db = -5.0
 pitch_scale = 0.64
 playback_type = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
