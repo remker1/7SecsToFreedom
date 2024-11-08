@@ -35,19 +35,28 @@
 
 7. Visualize Level 1 scene and character animation
 	Abdul
-		
+		Added background and created different layers for colliding and background. added music and SFX.
 	Gavin
-
+		Linked Idle, Move and Jump Animation
 8. Paint collision areas for map tiles
 	Abdul
-	Gavin
+		Painted the collision areas for utensils and appliances.
 
 9. Game mechanics, including main game rules and character movement mechanics
 	Abdul
+		added the time mechanism with resets.
 	Gavin
+		code for flipping the character
 	Leo
+		added mechanism to detect dying (falling too fast)
 
 10. divide and distribute levels to each person, and brainstorm about each level.
+	
+    We are assigned the following:
+
 	Abdul
+		Backyard
 	Gavin
-	Leo
+		Road (beside the sea)
+	Leo	
+		Create a level based on level 1 using the kitchen, and create the Main page and transitions.
