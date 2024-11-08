@@ -1,3 +1,21 @@
+commit c981ba5ac55d85d68f68fecfd825f9584ea31ca7
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 16:23:18 2024 -0600
+
+    Making sure of no duplication and update folders.
+
+commit 968d1acc06c7c3b4b3307da6d75635ddd59e19b8
+Author: arehman36 <dpu196@usask.ca>
+Date:   Thu Nov 7 15:59:11 2024 -0600
+
+    Made some changes
+
+commit 9a784c78c000f68c5eaab23d3fe90cd56d1c34b9
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Nov 7 15:11:42 2024 -0600
+
+    Delete .DS_Store
+
 commit e602c604dee12e9dabe5755a83c0978600ea1413
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Thu Nov 7 15:06:12 2024 -0600
