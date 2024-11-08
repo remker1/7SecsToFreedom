@@ -1,3 +1,15 @@
+commit 1cb51790dea022e32f0519a6d963bcfed79a391c
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 8 02:05:37 2024 -0600
+
+    all documents done, ready for submit
+
+commit 1faa6d2b8d1ceed98697eeae58630c8f6051ad26
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 20:15:22 2024 -0600
+
+    Finished the distribution.txt, progress.txt.
+
 commit dee26c3f453b6705cbc957c03d23d446cae81573
 Merge: f5430ca 52f879b
 Author: Gavin Caras (gsc565) <gsc565@mail.usask.ca>
