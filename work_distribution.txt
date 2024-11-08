@@ -1,0 +1,53 @@
+1. BrainStrom Level Design of Level 1 (Tutorial)
+	Abdul
+		The camera follows the character, and the Game should be horizontal.
+	Gavin
+		The fish bowl should be closed, and the Fish escapes from the kitchen
+	Leo
+		Seven seconds to reset the timer on the top left of the camera. And dying mechanics, as the speed of crashing and dying.
+
+2. Break the project down into small tasks and task distribution
+	Abdul
+		Making Skeleton Level 1 Game.
+	Gavin
+		Detailing the Level 1 Game and Documentation
+	Leo
+		Animation of Characters and assist with developments (be the needy guy)
+
+3. Godot tutorials of intermediate to advanced level
+	Indivisual research.
+
+4. Gitlab search and tutorial making for later use
+	Leo
+		Creating GitLab repo and tutorial pdf for git commands. 
+
+5. Assets searching, including both images and sounds
+	Abdul
+		Assets for Sounds
+	Gavin
+		Assets for Background
+	Leo
+		Assets for Character
+
+6. Animation image editing for Character Idle, Move, Jump and Die
+	Leo
+		Put together assets to make sure the fish is in a bowl with water. Edited frame by frame for smooth animation. Currently done Idle, Move, Jump. Die is still in progress.		
+
+7. Visualize Level 1 scene and character animation
+	Abdul
+		
+	Gavin
+
+8. Paint collision areas for map tiles
+	Abdul
+	Gavin
+
+9. Game mechanics, including main game rules and character movement mechanics
+	Abdul
+	Gavin
+	Leo
+
+10. divide and distribute levels to each person, and brainstorm about each level.
+	Abdul
+	Gavin
+	Leo
