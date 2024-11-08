@@ -1,3 +1,50 @@
+commit dee26c3f453b6705cbc957c03d23d446cae81573
+Merge: f5430ca 52f879b
+Author: Gavin Caras (gsc565) <gsc565@mail.usask.ca>
+Date:   Thu Nov 7 20:04:00 2024 -0600
+
+    Merge branch 'GavinBranch' into 'main'
+    
+    Animation direction update
+    
+    See merge request wni817/cmpt306gp!19
+
+commit f5430ca08418869a2f13b7036be2196a1339d9af
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Nov 7 19:55:51 2024 -0600
+
+    Delete ~$Example Time tracker.xlsx
+
+commit c6c9e2fc05ee1e716cf8760afb07cd5f4018bdad
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Nov 7 19:52:14 2024 -0600
+
+     Linked animation IDLE to script, Added flipping animation for different direction
+
+commit facb728c972ce2801d96da707de01e18e5b0a5a2
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 19:27:32 2024 -0600
+
+    spacers are added to the animation PNGs so that each frames looks more complete vertically.
+
+commit ed4421e1c0e6696854a9092d77378ba52decb154
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 19:11:36 2024 -0600
+
+    Reworked on .gitignore, preventing errors in the future.
+
+commit 9229ab702998667888ce2e28ee372d03a11308c7
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 19:04:41 2024 -0600
+
+    Remove .DS_Store files from tracking
+
+commit b7dd24eefcfd976e289d5bcf1422df0fd1564c29
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Thu Nov 7 18:57:49 2024 -0600
+
+    Die machnism is implemented, new Animation for Idle, Move and Jump are added to the Assets folder.
+
 commit c981ba5ac55d85d68f68fecfd825f9584ea31ca7
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Thu Nov 7 16:23:18 2024 -0600
