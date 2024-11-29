@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/fish_bowl.gd" id="1_2alve"]
 [ext_resource type="Texture2D" uid="uid://bjum15ef6jucn" path="res://Assets/FishIdle.png" id="2_qunis"]
-[ext_resource type="AudioStream" uid="uid://cf8utos6j0ko1" path="res://Sounds/jumping.wav" id="3_n2fq0"]
+[ext_resource type="AudioStream" path="res://Sounds/jumping.wav" id="3_n2fq0"]
 [ext_resource type="Texture2D" uid="uid://by0by7h05bwt4" path="res://Assets/FishJump.png" id="3_v3ykf"]
-[ext_resource type="AudioStream" uid="uid://f4w8uvxfeuea" path="res://Sounds/glass-hitwav.wav" id="4_8is26"]
+[ext_resource type="AudioStream" path="res://Sounds/glass-hitwav.wav" id="4_8is26"]
 [ext_resource type="Texture2D" uid="uid://cjq7g0q7wb6l1" path="res://Assets/FishSwim.png" id="4_qb8xu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvv4x"]
