@@ -103,6 +103,12 @@ Date:   Thu Nov 7 18:57:49 2024 -0600
 
     Die machnism is implemented, new Animation for Idle, Move and Jump are added to the Assets folder.
 
+commit c4181d9a2550ab6b68b7a7a96111389567cc5543
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Nov 7 16:27:06 2024 -0600
+
+    Delete .DS_Store
+
 commit c981ba5ac55d85d68f68fecfd825f9584ea31ca7
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Thu Nov 7 16:23:18 2024 -0600
