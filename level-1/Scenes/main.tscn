@@ -197,7 +197,7 @@ horizontal_alignment = 1
 [connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/Continue" to="UICanvas" method="_on_continue_pressed"]
 [connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/MainPage" to="UICanvas" method="_on_main_page_pressed"]
 [connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/PulseExit" to="UICanvas" method="_on_pulse_exit_pressed"]
-[connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverBackMain" to="UICanvas" method="_on_over_back_main_pressed"]
 [connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverBackMain" to="UICanvas" method="_on_start_pressed"]
+[connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverBackMain" to="UICanvas" method="_on_over_back_main_pressed"]
 [connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverExit" to="UICanvas" method="_on_exit_pressed"]
 [connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverExit" to="UICanvas" method="_on_over_exit_pressed"]
