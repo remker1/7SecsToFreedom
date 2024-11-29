@@ -1,11 +1,10 @@
 extends CanvasLayer
 
-const GAME_SCENE = preload("res://Scenes/game_scene.tscn")
+const GAME_SCENE = preload("res://Scenes/level_0_game_scene.tscn")
 var game_scene : Node2D
 @onready var main_menu: Control = $MainMenu
 @onready var pulse_menu: Control = $PulseMenu
 @onready var game_over_menu: Control = $GameOverMenu
-@onready var time: Label = $GameOverMenu/Panel/Time
 
 var starttime
 
@@ -19,11 +18,12 @@ func _ready() -> void:
 func _on_start_pressed() -> void:
 	game_scene = GAME_SCENE.instantiate()
 	get_parent().add_child(game_scene)
-	game_scene.game_over.connect(_on_game_scene_game_over)
+	#game_scene.game_over.connect(_on_game_scene_game_over)
 	main_menu.hide()
 	get_tree().paused = false
-	starttime = Time.get_unix_time_from_system()
 
+func _on_level_pressed() -> void:
+	pass # Replace with function body.
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
@@ -63,9 +63,5 @@ func _on_over_exit_pressed() -> void:
 
 func _on_game_scene_game_over() -> void:
 	game_over_menu.show()
-	var endtime = Time.get_unix_time_from_system()
-	var timetaken = endtime - starttime
-	var datetime = Time.get_datetime_dict_from_unix_time(timetaken)
-	time.text = "Time Taken: "+str(datetime["hour"])+" : "+str(datetime["minute"])+" : " + str(datetime["second"])
 	game_scene.queue_free()
 	
