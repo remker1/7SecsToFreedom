@@ -1,0 +1,11 @@
+1. BrainStrom Level Design of Level 1 (Tutorial)
+2. Break the project down into small tasks and task distribution
+3. Godot tutorials of intermediate to advanced level
+4. Gitlab search and tutorial making for later use
+5. Assets searching, including both images and sounds
+6. Animation image editing for Character Idle, Move, Jump and Die
+7. Visualize Level 1 scene and character animation
+8. Paint collision areas for map tiles
+9. Game mechanics, including main game rules and character movement mechanics
+10. divide and distribute levels to each person, and brainstorm about each level.
+
