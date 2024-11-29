@@ -1,8 +1,42 @@
+commit bbc93f77db8d336750089bdc44edc20db52825da
+Merge: 7c5c6cf bf41e90
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Fri Nov 8 02:13:29 2024 -0600
+
+    Merge branch 'LeoBranch' into 'main'
+    
+    Updates
+    
+    See merge request wni817/cmpt306gp!22
+
+commit bf41e904f9284bad1644b6f5963e1eeebd00b2fc
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 8 02:12:27 2024 -0600
+
+    Update gitlog.txt
+
+commit 7c5c6cf74538805d10da8713453920a7224244c5
+Merge: 1ee0d4d 1cb5179
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Fri Nov 8 02:10:03 2024 -0600
+
+    Merge branch 'LeoBranch' into 'main'
+    
+    Milestone2 Complete
+    
+    See merge request wni817/cmpt306gp!21
+
 commit 1cb51790dea022e32f0519a6d963bcfed79a391c
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Fri Nov 8 02:05:37 2024 -0600
 
     all documents done, ready for submit
+
+commit f4afeea1329ffa4ae77afde0a9c844fa17361a85
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Nov 7 22:16:08 2024 -0600
+
+    Added the exit text, Added the Game Prototype Demo
 
 commit 1faa6d2b8d1ceed98697eeae58630c8f6051ad26
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
@@ -56,6 +90,12 @@ Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Thu Nov 7 18:57:49 2024 -0600
 
     Die machnism is implemented, new Animation for Idle, Move and Jump are added to the Assets folder.
+
+commit c4181d9a2550ab6b68b7a7a96111389567cc5543
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Thu Nov 7 16:27:06 2024 -0600
+
+    Delete .DS_Store
 
 commit c981ba5ac55d85d68f68fecfd825f9584ea31ca7
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
