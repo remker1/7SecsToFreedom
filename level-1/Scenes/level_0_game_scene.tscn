@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=4 uid="uid://eo5d465grok0"]
+[gd_scene load_steps=10 format=4 uid="uid://eo5d465grok0"]
 
 [ext_resource type="Texture2D" uid="uid://bd30t7sdmb68d" path="res://Assets/background-1.png" id="1_rrpyv"]
 [ext_resource type="PackedScene" uid="uid://cd6en602ehxvv" path="res://Scenes/fish_bowl_player.tscn" id="2_yoq6n"]
-[ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="3_r3b04"]
-[ext_resource type="Script" path="res://Scenes/panel.gd" id="4_m0und"]
+[ext_resource type="Script" path="res://Scripts/panel.gd" id="3_wbedp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iec6f"]
 texture = ExtResource("1_rrpyv")
@@ -6128,13 +6127,12 @@ label_settings = SubResource("LabelSettings_s3rvl")
 position = Vector2(152, 107)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="FishBowl"]
-script = ExtResource("3_r3b04")
 
 [node name="Panel" type="Panel" parent="FishBowl/CanvasLayer"]
 offset_right = 34.0
 offset_bottom = 29.0
 scale = Vector2(3.91844, 1.12544)
-script = ExtResource("4_m0und")
+script = ExtResource("3_wbedp")
 metadata/_edit_use_anchors_ = true
 
 [node name="Minutes" type="Label" parent="FishBowl/CanvasLayer/Panel"]
