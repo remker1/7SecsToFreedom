@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b88y6pjab26jk"]
+[gd_scene load_steps=3 format=3 uid="uid://b88y6pjab26jk"]
 
 [ext_resource type="Script" path="res://Scripts/ui_manager.gd" id="1_a2t6h"]
+[ext_resource type="Texture2D" uid="uid://bn1qu02fuk23h" path="res://Assets/HomePage.png" id="2_n2mrr"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,6 +10,7 @@ process_mode = 3
 script = ExtResource("1_a2t6h")
 
 [node name="MainMenu" type="Control" parent="UICanvas"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -143,16 +145,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Time" type="Label" parent="UICanvas/GameOverMenu/Panel"]
-layout_mode = 0
-offset_left = 312.0
-offset_top = 88.0
-offset_right = 756.0
-offset_bottom = 171.0
-theme_override_font_sizes/font_size = 60
-text = "Time taken:"
-horizontal_alignment = 1
-
 [node name="CenterContainer" type="CenterContainer" parent="UICanvas/GameOverMenu/Panel"]
 layout_mode = 1
 anchors_preset = 15
@@ -165,10 +157,16 @@ grow_vertical = 2
 layout_mode = 2
 alignment = 1
 
+[node name="Thanks" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Thank you for playing"
+horizontal_alignment = 1
+
 [node name="OverBackMain" type="Button" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Start"
+text = "Main Menu"
 
 [node name="OverExit" type="Button" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -177,19 +175,39 @@ text = "Exit"
 
 [node name="Label1" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Made by Sihan Liu for GameJam."
+text = "CMPT306 Group30"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Pets could suffer from being lonely. There are many cases pets passed away indirectly from mental health issues. 
-"
+text = "With your gentle guidance, the fish dives into the endless blue, its scales catching shards of sunlight as it weaves through the ocean’s embrace—each flick of its tail a symphony of defiance, each ripple an anthem of untamed freedom, carving its path through boundless horizons."
 horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="Label3" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "Save their lifes, Make their lifes count!"
-horizontal_alignment = 1
+[node name="MapMenu" type="Control" parent="UICanvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UICanvas/MapMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_n2mrr")
+expand_mode = 1
+
+[node name="Level 0 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 88.0
+offset_right = 594.0
+offset_bottom = 128.0
 
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Start" to="UICanvas" method="_on_start_pressed"]
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Levels" to="UICanvas" method="_on_levels_pressed"]
