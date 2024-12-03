@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://cuvb2fex7jgjn"]
+[gd_scene load_steps=11 format=4 uid="uid://cuvb2fex7jgjn"]
 
 [ext_resource type="Texture2D" uid="uid://d1fagi4emvvfs" path="res://level-3/Road-Assets/Backgrounds/Road background.jpg" id="1_cadfi"]
 [ext_resource type="PackedScene" uid="uid://cd6en602ehxvv" path="res://Scenes/fish_bowl_player.tscn" id="2_w3jej"]
 [ext_resource type="Script" path="res://level-3/panel.gd" id="3_j4n4s"]
+[ext_resource type="PackedScene" uid="uid://cmdsa83tq5sjf" path="res://level-3/cat.tscn" id="4_u84w0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qx2cv"]
 texture = ExtResource("1_cadfi")
@@ -22019,3 +22020,6 @@ offset_top = 1.77778
 offset_right = 86.2222
 offset_bottom = 24.7778
 text = "000"
+
+[node name="cat" parent="." instance=ExtResource("4_u84w0")]
+position = Vector2(790, 542)
