@@ -6136,7 +6136,10 @@ script = ExtResource("3_wbedp")
 metadata/_edit_use_anchors_ = true
 
 [node name="Minutes" type="Label" parent="FishBowl/CanvasLayer/Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0143998
+anchor_right = -0.0143998
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 23.0
@@ -6154,7 +6157,10 @@ text = "00."
 metadata/_edit_use_anchors_ = true
 
 [node name="Msecs" type="Label" parent="FishBowl/CanvasLayer/Panel"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00966195
+anchor_right = -0.00966195
 offset_left = 21.0
 offset_right = 61.0
 offset_bottom = 23.0
