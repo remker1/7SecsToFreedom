@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b88y6pjab26jk"]
+[gd_scene load_steps=7 format=3 uid="uid://b88y6pjab26jk"]
 
 [ext_resource type="Script" path="res://Scripts/ui_manager.gd" id="1_a2t6h"]
 [ext_resource type="Texture2D" uid="uid://bn1qu02fuk23h" path="res://Assets/HomePage.png" id="2_n2mrr"]
+[ext_resource type="Texture2D" uid="uid://wnt4c1u15ory" path="res://Assets/Buttons/ButtonNormal.png" id="3_43uqx"]
+[ext_resource type="Texture2D" uid="uid://rqbblsxu2gad" path="res://Assets/Buttons/ButtonClicked.png" id="4_0jlap"]
+[ext_resource type="Texture2D" uid="uid://c6wbjdi6fdfxf" path="res://Assets/Buttons/ButtonHovered.png" id="5_rfg6f"]
+[ext_resource type="Texture2D" uid="uid://c5rf6ua7uouf2" path="res://Assets/Buttons/menu (1).png" id="6_hj8lj"]
 
 [node name="Main" type="Node2D"]
 
@@ -118,6 +122,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Continue Game"
 
+[node name="Map" type="Button" parent="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Level Selection
+"
+
 [node name="MainPage" type="Button" parent="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -192,7 +202,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="UICanvas/MapMenu"]
+[node name="BackgroundMap" type="TextureRect" parent="UICanvas/MapMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -202,20 +212,94 @@ grow_vertical = 2
 texture = ExtResource("2_n2mrr")
 expand_mode = 1
 
+[node name="Final Scene Button" type="TextureButton" parent="UICanvas/MapMenu"]
+offset_left = 277.0
+offset_top = 588.0
+offset_right = 347.0
+offset_bottom = 657.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level 3 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+offset_left = 946.0
+offset_top = 465.0
+offset_right = 1016.0
+offset_bottom = 534.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level 2 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+offset_left = 804.0
+offset_top = 113.0
+offset_right = 874.0
+offset_bottom = 182.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level 1 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+offset_left = 661.0
+offset_top = 289.0
+offset_right = 731.0
+offset_bottom = 358.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
 [node name="Level 0 Button" type="TextureButton" parent="UICanvas/MapMenu"]
 layout_mode = 0
-offset_left = 554.0
-offset_top = 88.0
-offset_right = 594.0
-offset_bottom = 128.0
+offset_left = 565.0
+offset_top = 98.0
+offset_right = 635.0
+offset_bottom = 167.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="MapMenuButton" type="MenuButton" parent="UICanvas/MapMenu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_right = 62.0
+offset_bottom = 120.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("6_hj8lj")
+text_overrun_behavior = 1
+clip_text = true
+expand_icon = true
+switch_on_hover = true
+item_count = 2
+popup/item_0/text = "Main Menu"
+popup/item_1/text = "Exit"
+popup/item_1/id = 1
 
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Start" to="UICanvas" method="_on_start_pressed"]
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Levels" to="UICanvas" method="_on_levels_pressed"]
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Exit" to="UICanvas" method="_on_exit_pressed"]
 [connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/Continue" to="UICanvas" method="_on_continue_pressed"]
+[connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/Map" to="UICanvas" method="_on_map_pressed"]
 [connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/MainPage" to="UICanvas" method="_on_main_page_pressed"]
 [connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/PulseExit" to="UICanvas" method="_on_pulse_exit_pressed"]
 [connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverBackMain" to="UICanvas" method="_on_over_back_main_pressed"]
-[connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverBackMain" to="UICanvas" method="_on_start_pressed"]
-[connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverExit" to="UICanvas" method="_on_exit_pressed"]
 [connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverExit" to="UICanvas" method="_on_over_exit_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Final Scene Button" to="UICanvas" method="_on_final_scene_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 3 Button" to="UICanvas" method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 2 Button" to="UICanvas" method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 1 Button" to="UICanvas" method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 0 Button" to="UICanvas" method="_on_level_0_button_pressed"]
+[connection signal="toggled" from="UICanvas/MapMenu/MapMenuButton" to="UICanvas" method="_on_map_menu_button_toggled"]
