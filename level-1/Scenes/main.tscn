@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b88y6pjab26jk"]
+[gd_scene load_steps=9 format=3 uid="uid://b88y6pjab26jk"]
 
 [ext_resource type="Script" path="res://Scripts/ui_manager.gd" id="1_a2t6h"]
+[ext_resource type="Texture2D" uid="uid://djwna84tm8hf8" path="res://Assets/MainMenuImage.jpg" id="2_ftfi0"]
 [ext_resource type="Texture2D" uid="uid://bn1qu02fuk23h" path="res://Assets/HomePage.png" id="2_n2mrr"]
 [ext_resource type="Texture2D" uid="uid://wnt4c1u15ory" path="res://Assets/Buttons/ButtonNormal.png" id="3_43uqx"]
+[ext_resource type="Texture2D" uid="uid://dkgwbul2nfmri" path="res://Assets/FinImage.jpg" id="3_pbo60"]
 [ext_resource type="Texture2D" uid="uid://rqbblsxu2gad" path="res://Assets/Buttons/ButtonClicked.png" id="4_0jlap"]
 [ext_resource type="Texture2D" uid="uid://c6wbjdi6fdfxf" path="res://Assets/Buttons/ButtonHovered.png" id="5_rfg6f"]
 [ext_resource type="Texture2D" uid="uid://c5rf6ua7uouf2" path="res://Assets/Buttons/menu (1).png" id="6_hj8lj"]
@@ -21,6 +23,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UICanvas/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ftfi0")
 
 [node name="Panel" type="Panel" parent="UICanvas/MainMenu"]
 layout_mode = 1
@@ -147,6 +158,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Background" type="TextureRect" parent="UICanvas/GameOverMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pbo60")
+
 [node name="Panel" type="Panel" parent="UICanvas/GameOverMenu"]
 layout_mode = 1
 anchors_preset = 15
@@ -223,6 +243,16 @@ texture_pressed = ExtResource("4_0jlap")
 texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
+[node name="LevelFin" type="Label" parent="UICanvas/MapMenu"]
+offset_left = 249.0
+offset_top = 605.0
+offset_right = 317.0
+offset_bottom = 654.0
+text = "Level Fin
+Ocean"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Level 3 Button" type="TextureButton" parent="UICanvas/MapMenu"]
 offset_left = 946.0
 offset_top = 465.0
@@ -233,6 +263,16 @@ texture_normal = ExtResource("3_43uqx")
 texture_pressed = ExtResource("4_0jlap")
 texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
+
+[node name="Level3" type="Label" parent="UICanvas/MapMenu"]
+offset_left = 935.0
+offset_top = 484.0
+offset_right = 989.0
+offset_bottom = 533.0
+text = "Level 3
+Road"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Level 2 Button" type="TextureButton" parent="UICanvas/MapMenu"]
 offset_left = 804.0
@@ -245,6 +285,16 @@ texture_pressed = ExtResource("4_0jlap")
 texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
+[node name="Level2" type="Label" parent="UICanvas/MapMenu"]
+offset_left = 777.0
+offset_top = 56.0
+offset_right = 849.0
+offset_bottom = 105.0
+text = "Level 2
+Backyard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Level 1 Button" type="TextureButton" parent="UICanvas/MapMenu"]
 offset_left = 661.0
 offset_top = 289.0
@@ -255,6 +305,16 @@ texture_normal = ExtResource("3_43uqx")
 texture_pressed = ExtResource("4_0jlap")
 texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
+
+[node name="Level1" type="Label" parent="UICanvas/MapMenu"]
+offset_left = 627.0
+offset_top = 306.0
+offset_right = 718.0
+offset_bottom = 355.0
+text = "Level 1
+LivingRoom"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Level 0 Button" type="TextureButton" parent="UICanvas/MapMenu"]
 layout_mode = 0
@@ -268,25 +328,43 @@ texture_pressed = ExtResource("4_0jlap")
 texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
+[node name="Level0" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 115.0
+offset_right = 614.0
+offset_bottom = 164.0
+text = "Level 0
+Kitchen"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
 [node name="MapMenuButton" type="MenuButton" parent="UICanvas/MapMenu"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -64.0
-offset_right = 62.0
-offset_bottom = 120.0
-grow_horizontal = 0
-scale = Vector2(0.5, 0.5)
+offset_left = 1096.0
+offset_top = 4.0
+offset_right = 1616.0
+offset_bottom = 524.0
+scale = Vector2(0.1, 0.1)
 icon = ExtResource("6_hj8lj")
 text_overrun_behavior = 1
 clip_text = true
-expand_icon = true
 switch_on_hover = true
 item_count = 2
 popup/item_0/text = "Main Menu"
 popup/item_1/text = "Exit"
 popup/item_1/id = 1
+
+[node name="TotalDeathCount" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TotalTimeSpent" type="Label" parent="UICanvas/MapMenu"]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Start" to="UICanvas" method="_on_start_pressed"]
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Levels" to="UICanvas" method="_on_levels_pressed"]
