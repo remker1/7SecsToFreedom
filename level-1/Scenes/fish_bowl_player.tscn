@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cd6en602ehxvv"]
+[gd_scene load_steps=52 format=3 uid="uid://cd6en602ehxvv"]
 
 [ext_resource type="Script" path="res://Scripts/fish_bowl.gd" id="1_2alve"]
 [ext_resource type="Texture2D" uid="uid://bjum15ef6jucn" path="res://Assets/FishIdle.png" id="2_qunis"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://by0by7h05bwt4" path="res://Assets/FishJump.png" id="3_v3ykf"]
 [ext_resource type="AudioStream" uid="uid://f4w8uvxfeuea" path="res://Sounds/glass-hitwav.wav" id="4_8is26"]
 [ext_resource type="Texture2D" uid="uid://cjq7g0q7wb6l1" path="res://Assets/FishSwim.png" id="4_qb8xu"]
+[ext_resource type="AudioStream" uid="uid://dwaprhribsqp" path="res://Sounds/glass-breaking-1.wav" id="7_eqafs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvv4x"]
 atlas = ExtResource("2_qunis")
@@ -327,8 +328,9 @@ collision_mask = 3
 script = ExtResource("1_2alve")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_3k85a")
-animation = &"FishIdle"
+animation = &"FishSwim"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -343,5 +345,11 @@ stream = ExtResource("4_8is26")
 volume_db = -5.0
 pitch_scale = 0.64
 playback_type = 1
+
+[node name="death_noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_eqafs")
+volume_db = -0.378
+
+[node name="Timer" type="Timer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
