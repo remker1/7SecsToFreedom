@@ -1,0 +1,132 @@
+[gd_scene load_steps=25 format=3 uid="uid://bee371drlcutt"]
+
+[ext_resource type="Texture2D" uid="uid://bkbph27f2dua3" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_000.png" id="1_88q1s"]
+[ext_resource type="Script" path="res://level-3/car.gd" id="1_eocrv"]
+[ext_resource type="Texture2D" uid="uid://bljybcw2j3d7t" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_001.png" id="2_d11dw"]
+[ext_resource type="Texture2D" uid="uid://dlemrtp4ixog" path="res://level-3/Road-Assets/Enemies/silver-car/flip 1.png" id="2_xx3gc"]
+[ext_resource type="Texture2D" uid="uid://bgmjh5iuxp7b1" path="res://level-3/Road-Assets/Enemies/silver-car/flip 2.png" id="3_6c8d5"]
+[ext_resource type="Texture2D" uid="uid://dh1vj2writb81" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_002.png" id="3_jcsjf"]
+[ext_resource type="Texture2D" uid="uid://dsp3j4ov04u0n" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_003.png" id="4_dvyx8"]
+[ext_resource type="Texture2D" uid="uid://c0lkaslkc31l3" path="res://level-3/Road-Assets/Enemies/silver-car/flip 3.png" id="4_u4547"]
+[ext_resource type="Texture2D" uid="uid://b0brcrgwtvddw" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_004.png" id="5_7jxb8"]
+[ext_resource type="Texture2D" uid="uid://djaphrkh0usm7" path="res://level-3/Road-Assets/Enemies/silver-car/flip 4.png" id="5_nyfy0"]
+[ext_resource type="Texture2D" uid="uid://ckt5mj0idjxw0" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_005.png" id="6_eg7we"]
+[ext_resource type="Texture2D" uid="uid://burg6osn0gxi4" path="res://level-3/Road-Assets/Enemies/silver-car/flip 5.png" id="6_g3nka"]
+[ext_resource type="Texture2D" uid="uid://bbioh48o74mev" path="res://level-3/Road-Assets/Enemies/silver-car/flip 6.png" id="7_av8un"]
+[ext_resource type="Texture2D" uid="uid://bkpypcvmqxnjx" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_006.png" id="7_n6e8s"]
+[ext_resource type="Texture2D" uid="uid://cxiclvofefwtt" path="res://level-3/Road-Assets/Enemies/silver-car/flip 7.png" id="8_88vp6"]
+[ext_resource type="Texture2D" uid="uid://wqpg3lwso76e" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_007.png" id="8_ipt5s"]
+[ext_resource type="Texture2D" uid="uid://28yjmp4qpb85" path="res://level-3/Road-Assets/Enemies/silver-car/flip 8.png" id="9_8hivw"]
+[ext_resource type="Texture2D" uid="uid://f5uc8kfhgrft" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_008.png" id="9_to7y5"]
+[ext_resource type="Texture2D" uid="uid://bnrmikj4bngky" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_009.png" id="10_bsqi2"]
+[ext_resource type="Texture2D" uid="uid://cgr5tr3jnok6g" path="res://level-3/Road-Assets/Enemies/silver-car/flip 9.png" id="10_yhoev"]
+[ext_resource type="Texture2D" uid="uid://b1e84lbflsfge" path="res://level-3/Road-Assets/Enemies/silver-car/flip 10.png" id="11_6c8pm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0rcjp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xx3gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6c8d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u4547")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nyfy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g3nka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_av8un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_88vp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8hivw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yhoev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6c8pm")
+}],
+"loop": true,
+"name": &"moving_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_88q1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d11dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jcsjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dvyx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7jxb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eg7we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n6e8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ipt5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_to7y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bsqi2")
+}],
+"loop": true,
+"name": &"moving_right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7iech"]
+size = Vector2(344.444, 104.976)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vxp2"]
+size = Vector2(344, 53)
+
+[node name="car" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_eocrv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_0rcjp")
+animation = &"moving_left"
+frame_progress = 0.657308
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.71968, 21)
+rotation = 3.14159
+scale = Vector2(0.997085, -0.514404)
+shape = SubResource("RectangleShape2D_7iech")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-15, 98)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(17, -77.5)
+shape = SubResource("RectangleShape2D_1vxp2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

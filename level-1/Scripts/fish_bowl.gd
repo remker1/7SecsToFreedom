@@ -1,69 +1,70 @@
 extends CharacterBody2D
 
-@onready var collide_2: TileMapLayer = $"../Collide-2"
-
-const SPEED = 300.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 @onready var animation = $AnimatedSprite2D
 @onready var sfx_jump = $sfx_jump
 @onready var sfx_waterswoosh: AudioStreamPlayer2D = $sfx_waterswoosh
 @onready var death_noise: AudioStreamPlayer2D = $death_noise
 
+var is_dead = false
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	
+	if is_dead:
+		return
+
+	# Add gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		if velocity.y >= 600:
-			# Death animation still in progress, Console Message as replacement.
-			print("Die Animation")
-			get_tree().reload_current_scene()
-			
+			die()
 
-		if velocity.y >= 600: 
-			print("play death")	# if we hit the floor too hard, we die
-			death_noise.play(0.05) # death noise
-			#get_tree().reload_current_scene() # restarting.....
-
-	# Handle jump.
+	# Handle jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		animation.play("FishJump")
 		sfx_jump.play()
-		 
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Handle movement
 	var direction := Input.get_axis("ui_left", "ui_right")
-	
 	if direction > 0:
 		animation.flip_h = false
 	elif direction < 0:
 		animation.flip_h = true
 	
-	if direction == 0 :
+	if direction == 0:
 		animation.play("FishIdle")
 	else:
 		animation.play("FishSwim")
 	
-	if direction:
-		velocity.x = direction * SPEED
+	velocity.x = direction * SPEED if direction != 0 else move_toward(velocity.x, 0, SPEED)
 
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
-
+	# Move and check collisions
 	move_and_slide()
-	
-# currently not working as expected. Should playu a sound if we hit a wall but only once, it does it many times.
-	if is_on_wall():		
-			if not sfx_waterswoosh.playing:				
-					sfx_waterswoosh.play(0.50)
-	else:
-			sfx_waterswoosh.stop()
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		if collision.get_collider().name == "cat":
+			die()
+		if collision.get_collider().name == "car":
+			die()
 
+	# Wall collision sound
+	if is_on_wall():		
+		if not sfx_waterswoosh.playing:				
+			sfx_waterswoosh.play(0.50)
+	else:
+		sfx_waterswoosh.stop()
+
+func die():
+	print("Die Animation")
+	death_noise.play()
 	
-	
-	
-	
+	if is_instance_valid(self):
+		await get_tree().create_timer(0.0).timeout
+		
+		if get_tree() != null:
+			get_tree().reload_current_scene()
+		else:
+			print("Error: get_tree() is null after delay.")
+	else:
+		print("Error: Player instance is no longer valid.")

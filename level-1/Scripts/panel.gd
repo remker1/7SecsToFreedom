@@ -1,6 +1,6 @@
 extends Panel
 
-var time: float = 7.0  # Start the countdown from 7 seconds
+var time: float = 10000.0  # Start the countdown from 7 seconds
 var minutes: int = 0
 var seconds: int = 0
 var msec: int = 0
