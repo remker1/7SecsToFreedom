@@ -359,12 +359,19 @@ popup/item_1/id = 1
 
 [node name="TotalDeathCount" type="Label" parent="UICanvas/MapMenu"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_top = 580.0
+offset_right = 111.0
+offset_bottom = 603.0
+text = "DeathCount: 0
+"
 
 [node name="TotalTimeSpent" type="Label" parent="UICanvas/MapMenu"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_top = 603.0
+offset_right = 126.0
+offset_bottom = 652.0
+text = "TotalTimeSpent:
+hh:mm:ss
+"
 
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Start" to="UICanvas" method="_on_start_pressed"]
 [connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Levels" to="UICanvas" method="_on_levels_pressed"]
