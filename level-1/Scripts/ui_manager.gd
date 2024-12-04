@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 const LEVEL_0 = preload("res://Scenes/level_0_game_scene.tscn")
-const LEVEL_1 = preload("res://Scenes/level_0_game_scene.tscn")
+const LEVEL_1 = preload("res://Scenes/level_1_livingroom.tscn")
 const LEVEL_2 = preload("res://Scenes/level_0_game_scene.tscn")
 const LEVEL_3 = preload("res://Scenes/level_0_game_scene.tscn")
 

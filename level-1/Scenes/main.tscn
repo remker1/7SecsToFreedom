@@ -233,6 +233,7 @@ texture = ExtResource("2_n2mrr")
 expand_mode = 1
 
 [node name="Final Scene Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 277.0
 offset_top = 588.0
 offset_right = 347.0
@@ -244,6 +245,7 @@ texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
 [node name="LevelFin" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 249.0
 offset_top = 605.0
 offset_right = 317.0
@@ -254,6 +256,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level 3 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 946.0
 offset_top = 465.0
 offset_right = 1016.0
@@ -265,6 +268,7 @@ texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
 [node name="Level3" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 935.0
 offset_top = 484.0
 offset_right = 989.0
@@ -275,6 +279,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level 2 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 804.0
 offset_top = 113.0
 offset_right = 874.0
@@ -286,6 +291,7 @@ texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
 [node name="Level2" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 777.0
 offset_top = 56.0
 offset_right = 849.0
@@ -296,6 +302,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Level 1 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 661.0
 offset_top = 289.0
 offset_right = 731.0
@@ -307,6 +314,7 @@ texture_hover = ExtResource("5_rfg6f")
 stretch_mode = 0
 
 [node name="Level1" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_left = 627.0
 offset_top = 306.0
 offset_right = 718.0
@@ -366,6 +374,7 @@ text = "DeathCount: 0
 "
 
 [node name="TotalTimeSpent" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
 offset_top = 603.0
 offset_right = 126.0
 offset_bottom = 652.0
