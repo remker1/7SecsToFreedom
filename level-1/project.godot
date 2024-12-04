@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 BackgroundMusic="*res://Scenes/background_music.tscn"
 
+[global_group]
+
+fish=""
+
 [input]
 
 Quit={

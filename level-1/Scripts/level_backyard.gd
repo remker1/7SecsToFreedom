@@ -51,4 +51,5 @@ func _on_play_death_sound():
 	call_deferred("reload_scene")
 # reloads the current scene.
 func reload_scene():
-	get_tree().reload_current_scene()
+	if get_tree():  # Ensure the scene tree still exists
+		get_tree().reload_current_scene()

@@ -12,6 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("fish"):
+	if body is CharacterBody2D:
 		body.set_position($Destination.global_position)
 	

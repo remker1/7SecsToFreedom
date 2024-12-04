@@ -3672,6 +3672,8 @@ lifetime = 1.2
 randomness = 0.13
 
 [node name="Portal" parent="." instance=ExtResource("7_vhxqb")]
+light_mask = 3
+visibility_layer = 3
 position = Vector2(1022, 529)
 
 [node name="CollisionShape2D" parent="Portal" index="1"]
