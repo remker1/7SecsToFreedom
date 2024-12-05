@@ -1,23 +1,37 @@
 extends CharacterBody2D
 
-@onready var collide_2: TileMapLayer = $"../Collide-2"
+
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @onready var animation = $AnimatedSprite2D
 @onready var sfx_jump = $sfx_jump
 @onready var sfx_waterswoosh: AudioStreamPlayer2D = $sfx_waterswoosh
+@onready var death_noise: AudioStreamPlayer2D = $death_noise
 
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
+func _handle_fall_death():
+	await get_tree().create_timer(0.5).timeout  # Wait for the sound to finish
+	get_tree().reload_current_scene()  # Restart scene
+
 	
+func _physics_process(delta: float) -> void:
+		
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+<<<<<<< HEAD
 		if velocity.y >= 800:
 			get_tree().reload_current_scene()
 			#get_tree().change_scene_to_file("res://Scenes/level_0_game_scene.tscn")
 			
+=======
+
+		if velocity.y >= 600: 
+			animation.hide()
+			print("play death")  # If we hit the floor too hard, we die
+			death_noise.play(0.05)  # Play death noise
+			call_deferred("_handle_fall_death")  # Defer handling the death to avoid physics interruptions
+>>>>>>> 66dc8204e56cce222f215587c9f9e84cc7477e36
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -54,6 +68,7 @@ func _physics_process(delta: float) -> void:
 	else:
 			sfx_waterswoosh.stop()
 
+	
 	
 	
 	
