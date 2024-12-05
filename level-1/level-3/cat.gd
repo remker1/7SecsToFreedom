@@ -4,9 +4,13 @@ var speed = 60.0
 var patrol_distance = 100.0  # Distance to patrol in pixels
 var start_position = Vector2.ZERO  # Initial position
 
+@onready var cat_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D  # Reference to the AudioStreamPlayer2D node
+
 func _ready():
 	start_position = global_position
-	$AnimatedSprite2D.play("right")  # Use this if you're using AnimatedSprite2D node
+	$AnimatedSprite2D.play("right")  # Start the animation
+	if cat_sound:  # Ensure the sound node exists
+		cat_sound.play()  # Play the cat sound
 
 func _physics_process(delta):
 	# Patrol logic
@@ -18,6 +22,8 @@ func _physics_process(delta):
 
 func flip():
 	speed = -speed
-	scale.x *= -1  # Flip the sprite
+	scale.x *= -1 # Flip the sprite
 
-		
+	# Restart cat sound when direction changes
+	if cat_sound:
+		cat_sound.play()

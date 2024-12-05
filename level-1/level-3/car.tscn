@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bee371drlcutt"]
+[gd_scene load_steps=26 format=3 uid="uid://bee371drlcutt"]
 
 [ext_resource type="Texture2D" uid="uid://bkbph27f2dua3" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_000.png" id="1_88q1s"]
 [ext_resource type="Script" path="res://level-3/car.gd" id="1_eocrv"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bnrmikj4bngky" path="res://level-3/Road-Assets/Enemies/silver-car/-_Mobil_Biasa01_009.png" id="10_bsqi2"]
 [ext_resource type="Texture2D" uid="uid://cgr5tr3jnok6g" path="res://level-3/Road-Assets/Enemies/silver-car/flip 9.png" id="10_yhoev"]
 [ext_resource type="Texture2D" uid="uid://b1e84lbflsfge" path="res://level-3/Road-Assets/Enemies/silver-car/flip 10.png" id="11_6c8pm"]
+[ext_resource type="AudioStream" uid="uid://dk7b2132ja15w" path="res://level-3/Road-Assets/Sounds/767911__matiasniemi__car_4.wav" id="22_hbo0c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0rcjp"]
 animations = [{
@@ -128,5 +129,8 @@ position = Vector2(17, -77.5)
 shape = SubResource("RectangleShape2D_1vxp2")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_hbo0c")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmdsa83tq5sjf"]
+[gd_scene load_steps=23 format=3 uid="uid://cmdsa83tq5sjf"]
 
 [ext_resource type="Script" path="res://level-3/cat.gd" id="1_urmue"]
 [ext_resource type="Texture2D" uid="uid://1gj4v6qp1wsd" path="res://level-3/Road-Assets/Enemies/CATSPRITESHEET_Orange.png" id="2_w78qn"]
+[ext_resource type="AudioStream" uid="uid://bnf4wx7xnm4q8" path="res://level-3/Road-Assets/Sounds/530341__wesleyextreme_gamer__cat-meow.wav" id="3_xuhkn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_848uj"]
 atlas = ExtResource("2_w78qn")
@@ -156,5 +157,8 @@ shape = SubResource("CapsuleShape2D_8p5nc")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 15)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xuhkn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

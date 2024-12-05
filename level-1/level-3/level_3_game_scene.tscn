@@ -21988,7 +21988,7 @@ tile_map_data = PackedByteArray("AAAAACMAAAAAAD0AAAAAACQAAAAAAD4AAAAAACUAAAAAAD8
 tile_set = SubResource("TileSet_7ryae")
 
 [node name="FishBowl" parent="." instance=ExtResource("2_w3jej")]
-position = Vector2(197, 548)
+position = Vector2(198, 548)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="FishBowl"]
 

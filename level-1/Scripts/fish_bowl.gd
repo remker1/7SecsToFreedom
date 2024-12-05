@@ -6,13 +6,14 @@ const JUMP_VELOCITY = -400.0
 @onready var sfx_jump = $sfx_jump
 @onready var sfx_waterswoosh: AudioStreamPlayer2D = $sfx_waterswoosh
 @onready var death_noise: AudioStreamPlayer2D = $death_noise
+var spawn_time = 0.0
 
-var is_dead = false
+var is_dead = false  # Tracks if the player is already dead
 
 @export var next_level_scene: String = "res://Scenes/level_0_game_scene.tscn"
 
 func _physics_process(delta: float) -> void:
-	if is_dead:
+	if is_dead:  # If the player is dead, skip further processing
 		return
 
 	# Add gravity
@@ -45,12 +46,17 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
-		if collision.get_collider().name == "cat":
-			die()
-		if collision.get_collider().name == "car":
-			die()
-		if collision.get_collider().name == "ball":
-			die()
+		var collider = collision.get_collider()
+		if collider and not is_dead:  # Only process collision if player is alive
+			if collider.name == "cat":
+				die()
+				print("Got hit by a cat")
+			elif collider.name == "car":
+				die()
+				print("Got hit by a car")
+			elif collider.name == "ball":
+				print("Got hit by a ball")
+				die()
 
 	# Wall collision sound
 	if is_on_wall():		
@@ -64,18 +70,16 @@ func _physics_process(delta: float) -> void:
 		switch_to_next_scene()
 
 func die():
-	print("Die Animation")
-	death_noise.play()
-	
-	if is_instance_valid(self):
-		await get_tree().create_timer(0.0).timeout
-		
-		if get_tree() != null:
-			get_tree().reload_current_scene()
-		else:
-			print("Error: get_tree() is null after delay.")
-	else:
-		print("Error: Player instance is no longer valid.")
+	if is_dead:  # Prevent multiple calls to die()
+		return
+	is_dead = true  # Mark player as dead
+	animation.set_process(false)
+	animation.set_physics_process(false)
+	animation.hide()
+
+	death_noise.play(0.05)
+	await get_tree().create_timer(0.04).timeout
+	call_deferred("reload_scene")
 		
 func switch_to_next_scene() -> void:
 	if next_level_scene != "":
@@ -83,3 +87,7 @@ func switch_to_next_scene() -> void:
 		get_tree().change_scene_to_file(next_level_scene)
 	else:
 		print("Next level scene is not set!")
+		
+func reload_scene():
+	if get_tree():
+		get_tree().reload_current_scene()
