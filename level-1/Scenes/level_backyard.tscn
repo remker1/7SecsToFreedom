@@ -1,12 +1,12 @@
-[gd_scene load_steps=18 format=4 uid="uid://d303lubbm5kmu"]
+[gd_scene load_steps=18 format=4 uid="uid://85lk88pbcm14"]
 
 [ext_resource type="Texture2D" uid="uid://d2kf6y8vqr20u" path="res://Assets/BackgroundYard(c2) (1).png" id="1_jy46f"]
 [ext_resource type="Script" path="res://Scripts/level_backyard.gd" id="1_m1xn4"]
 [ext_resource type="PackedScene" uid="uid://cd6en602ehxvv" path="res://Scenes/fish_bowl_player.tscn" id="2_smcpm"]
-[ext_resource type="PackedScene" uid="uid://2o3rp64liwjb" path="res://Scenes/missile.tscn" id="4_6amiu"]
+[ext_resource type="PackedScene" path="res://Scenes/missile.tscn" id="4_6amiu"]
 [ext_resource type="Script" path="res://panel.gd" id="4_6cdrc"]
-[ext_resource type="PackedScene" uid="uid://cp27ydmv32w3x" path="res://Scenes/spike_2.tscn" id="7_q7wma"]
-[ext_resource type="PackedScene" uid="uid://cj0m4oaxasfff" path="res://Scenes/portal.tscn" id="7_vhxqb"]
+[ext_resource type="PackedScene" path="res://Scenes/spike_2.tscn" id="7_q7wma"]
+[ext_resource type="PackedScene" uid="uid://bh7ugax0bv2b8" path="res://Scenes/portal.tscn" id="7_vhxqb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dfc26"]
 texture = ExtResource("1_jy46f")
@@ -3678,9 +3678,6 @@ position = Vector2(1022, 529)
 
 [node name="CollisionShape2D" parent="Portal" index="1"]
 position = Vector2(3, 0)
-
-[node name="Destination" parent="Portal" index="2"]
-position = Vector2(-543, -234)
 
 [node name="Spikes" type="Node2D" parent="."]
 

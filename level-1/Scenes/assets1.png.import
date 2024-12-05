@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by0by7h05bwt4"
-path="res://.godot/imported/FishJump.png-2540cc76b4b18bcd4d8696a5ed3f114c.ctex"
+uid="uid://dt5dp6ufc36ua"
+path="res://.godot/imported/assets1.png-a14b0813b449140073492848ba4945f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/FishJump.png"
-dest_files=["res://.godot/imported/FishJump.png-2540cc76b4b18bcd4d8696a5ed3f114c.ctex"]
+source_file="res://Scenes/assets1.png"
+dest_files=["res://.godot/imported/assets1.png-a14b0813b449140073492848ba4945f0.ctex"]
 
 [params]
 
