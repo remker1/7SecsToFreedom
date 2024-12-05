@@ -83,7 +83,7 @@ func die():
 		
 func switch_to_next_scene() -> void:
 	if next_level_scene != "":
-		print("Switching to the next level...")
+		print("Level completed!")
 		get_tree().change_scene_to_file(next_level_scene)
 	else:
 		print("Next level scene is not set!")
