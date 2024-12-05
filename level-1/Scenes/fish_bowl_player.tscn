@@ -324,7 +324,7 @@ animations = [{
 radius = 11.0204
 
 [node name="FishBowl" type="CharacterBody2D"]
-collision_mask = 6
+collision_mask = 14
 script = ExtResource("1_2alve")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

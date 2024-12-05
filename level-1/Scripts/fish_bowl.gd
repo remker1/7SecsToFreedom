@@ -9,13 +9,15 @@ const JUMP_VELOCITY = -400.0
 
 var is_dead = false
 
+@export var next_level_scene: String = "res://Scenes/level_0_game_scene.tscn"
+
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
 
 	# Add gravity
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta	
 		if velocity.y >= 600:
 			die()
 
@@ -47,6 +49,8 @@ func _physics_process(delta: float) -> void:
 			die()
 		if collision.get_collider().name == "car":
 			die()
+		if collision.get_collider().name == "ball":
+			die()
 
 	# Wall collision sound
 	if is_on_wall():		
@@ -54,6 +58,10 @@ func _physics_process(delta: float) -> void:
 			sfx_waterswoosh.play(0.50)
 	else:
 		sfx_waterswoosh.stop()
+		
+	# Check if player reaches the end of the screen
+	if global_position.x >= get_viewport_rect().size.x:
+		switch_to_next_scene()
 
 func die():
 	print("Die Animation")
@@ -68,3 +76,10 @@ func die():
 			print("Error: get_tree() is null after delay.")
 	else:
 		print("Error: Player instance is no longer valid.")
+		
+func switch_to_next_scene() -> void:
+	if next_level_scene != "":
+		print("Switching to the next level...")
+		get_tree().change_scene_to_file(next_level_scene)
+	else:
+		print("Next level scene is not set!")
