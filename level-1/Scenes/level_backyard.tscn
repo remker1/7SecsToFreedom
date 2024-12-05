@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=4 uid="uid://85lk88pbcm14"]
+[gd_scene load_steps=19 format=4 uid="uid://85lk88pbcm14"]
 
 [ext_resource type="Texture2D" uid="uid://d2kf6y8vqr20u" path="res://Assets/BackgroundYard(c2) (1).png" id="1_jy46f"]
 [ext_resource type="Script" path="res://Scripts/level_backyard.gd" id="1_m1xn4"]
 [ext_resource type="PackedScene" uid="uid://cd6en602ehxvv" path="res://Scenes/fish_bowl_player.tscn" id="2_smcpm"]
 [ext_resource type="PackedScene" path="res://Scenes/missile.tscn" id="4_6amiu"]
 [ext_resource type="Script" path="res://panel.gd" id="4_6cdrc"]
+[ext_resource type="Script" path="res://Scripts/portal_yard.gd" id="7_8svfi"]
 [ext_resource type="PackedScene" path="res://Scenes/spike_2.tscn" id="7_q7wma"]
 [ext_resource type="PackedScene" uid="uid://bh7ugax0bv2b8" path="res://Scenes/portal.tscn" id="7_vhxqb"]
 
@@ -3675,6 +3676,7 @@ randomness = 0.13
 light_mask = 3
 visibility_layer = 3
 position = Vector2(1022, 529)
+script = ExtResource("7_8svfi")
 
 [node name="CollisionShape2D" parent="Portal" index="1"]
 position = Vector2(3, 0)

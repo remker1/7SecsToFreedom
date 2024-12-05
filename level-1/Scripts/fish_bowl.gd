@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-		if velocity.y >= 600:
+		if velocity.y >= 700:
 			animation.hide()
 			if not has_played_death_noise:  # Play sound only if it hasn't been played
 				death_noise.play(0.05)
