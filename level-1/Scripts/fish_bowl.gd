@@ -14,10 +14,9 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		if velocity.y >= 600:
-			# Death animation still in progress, Console Message as replacement.
-			print("Die Animation")
+		if velocity.y >= 800:
 			get_tree().reload_current_scene()
+			#get_tree().change_scene_to_file("res://Scenes/level_0_game_scene.tscn")
 			
 
 	# Handle jump.
@@ -27,8 +26,6 @@ func _physics_process(delta: float) -> void:
 		sfx_jump.play()
 		 
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	
 	if direction > 0:

@@ -83,6 +83,7 @@ func _on_level_0_button_pressed() -> void:
 	get_parent().add_child(game_scene)
 	map_menu.hide()
 	main_menu.hide()
+	get_tree().paused = false
 	
 func _on_level_1_button_pressed() -> void:
 	print("level 1")
@@ -90,6 +91,7 @@ func _on_level_1_button_pressed() -> void:
 	get_parent().add_child(game_scene)
 	map_menu.hide()
 	main_menu.hide()
+	get_tree().paused = false
 
 func _on_level_2_button_pressed() -> void:
 	print("level 2")
@@ -97,6 +99,7 @@ func _on_level_2_button_pressed() -> void:
 	get_parent().add_child(game_scene)
 	map_menu.hide()
 	main_menu.hide()
+	get_tree().paused = false
 
 func _on_level_3_button_pressed() -> void:
 	print("level 3")
@@ -104,6 +107,7 @@ func _on_level_3_button_pressed() -> void:
 	get_parent().add_child(game_scene)
 	map_menu.hide()
 	main_menu.hide()
+	get_tree().paused = false
 
 func _on_map_menu_item_pressed(id: int) -> void:
 	match id:

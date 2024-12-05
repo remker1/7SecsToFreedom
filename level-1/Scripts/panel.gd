@@ -27,7 +27,8 @@ func _process(delta: float) -> void:
 func stop() -> void:
 	set_process(false)
 	# Perform any action when the countdown ends
-	get_tree().reload_current_scene()  # Example action: Reload current scene
+	# get_tree().change_scene_to_file("res://Scenes/level_0_game_scene.tscn")
+	get_tree().reload_current_scene()
 
 func get_time_formatted() -> String:
 	return "%02d:%02d.%03d" % [minutes, seconds, msec]
