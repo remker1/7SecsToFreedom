@@ -6172,8 +6172,16 @@ scale = Vector2(3.91844, 1.12544)
 script = ExtResource("3_wbedp")
 metadata/_edit_use_anchors_ = true
 
+<<<<<<< HEAD
+[node name="Minutes" type="Label" parent="FishBowl/CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0143998
+anchor_right = -0.0143998
+=======
 [node name="Minutes" type="Label" parent="CanvasLayer2/Panel"]
 layout_mode = 0
+>>>>>>> a86cb789a4aa5d5574c8bdfc4641909cfba8053d
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 23.0
@@ -6190,8 +6198,16 @@ scale = Vector2(0.405653, 1.12277)
 text = "00."
 metadata/_edit_use_anchors_ = true
 
+<<<<<<< HEAD
+[node name="Msecs" type="Label" parent="FishBowl/CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00966195
+anchor_right = -0.00966195
+=======
 [node name="Msecs" type="Label" parent="CanvasLayer2/Panel"]
 layout_mode = 0
+>>>>>>> a86cb789a4aa5d5574c8bdfc4641909cfba8053d
 offset_left = 21.0
 offset_right = 61.0
 offset_bottom = 23.0
