@@ -1,12 +1,12 @@
 [gd_scene load_steps=52 format=3 uid="uid://cd6en602ehxvv"]
 
-[ext_resource type="Script" path="res://Scripts/fish_bowl.gd" id="1_2alve"]
+[ext_resource type="Script" path="res://Scripts/fish_bowl_road.gd" id="1_2alve"]
 [ext_resource type="Texture2D" uid="uid://bjum15ef6jucn" path="res://Assets/FishIdle.png" id="2_qunis"]
-[ext_resource type="AudioStream" uid="uid://bgmv44sae8tws" path="res://Sounds/jumping.wav" id="3_n2fq0"]
+[ext_resource type="AudioStream" uid="uid://25c6xdp7qc6h" path="res://Sounds/jumping.wav" id="3_n2fq0"]
 [ext_resource type="Texture2D" uid="uid://by0by7h05bwt4" path="res://Assets/FishJump.png" id="3_v3ykf"]
-[ext_resource type="AudioStream" uid="uid://dqmk657l652xe" path="res://Sounds/glass-hitwav.wav" id="4_8is26"]
+[ext_resource type="AudioStream" uid="uid://gw7fja3ych0y" path="res://Sounds/glass-hitwav.wav" id="4_8is26"]
 [ext_resource type="Texture2D" uid="uid://cjq7g0q7wb6l1" path="res://Assets/FishSwim.png" id="4_qb8xu"]
-[ext_resource type="AudioStream" uid="uid://gygf7n4522b3" path="res://Sounds/glass-breaking-1.wav" id="7_vh4ts"]
+[ext_resource type="AudioStream" uid="uid://cn6toyy6fxj8s" path="res://Sounds/glass-breaking-1.wav" id="7_vh4ts"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvv4x"]
 atlas = ExtResource("2_qunis")
