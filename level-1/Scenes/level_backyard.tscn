@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cd6en602ehxvv" path="res://Scenes/fish_bowl_player.tscn" id="2_smcpm"]
 [ext_resource type="PackedScene" path="res://Scenes/missile.tscn" id="4_6amiu"]
 [ext_resource type="Script" path="res://panel.gd" id="4_6cdrc"]
-[ext_resource type="Script" path="res://Scripts/portal_yard.gd" id="7_8svfi"]
+[ext_resource type="Script" path="res://Scripts/fish_bowl.gd" id="4_j1qi5"]
 [ext_resource type="PackedScene" path="res://Scenes/spike_2.tscn" id="7_q7wma"]
 [ext_resource type="PackedScene" uid="uid://bh7ugax0bv2b8" path="res://Scenes/portal.tscn" id="7_vhxqb"]
 
@@ -3548,8 +3548,8 @@ texture = ExtResource("1_jy46f")
 74:42/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ysrja"]
-physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_dfc26")
 
 [sub_resource type="GDScript" id="GDScript_56d44"]
@@ -3616,6 +3616,16 @@ tile_set = SubResource("TileSet_ysrja")
 light_mask = 3
 visibility_layer = 3
 position = Vector2(152, 258)
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("4_j1qi5")
+
+[node name="AnimatedSprite2D" parent="FishBowl" index="0"]
+frame = 0
+frame_progress = 0.0
+
+[node name="CollisionShape2D" parent="FishBowl" index="1"]
+visible = false
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="FishBowl"]
 script = SubResource("GDScript_56d44")
@@ -3676,7 +3686,7 @@ randomness = 0.13
 light_mask = 3
 visibility_layer = 3
 position = Vector2(1022, 529)
-script = ExtResource("7_8svfi")
+collision_mask = 4
 
 [node name="CollisionShape2D" parent="Portal" index="1"]
 position = Vector2(3, 0)

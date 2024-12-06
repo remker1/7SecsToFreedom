@@ -346,7 +346,5 @@ volume_db = -5.0
 pitch_scale = 0.64
 playback_type = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="death_noise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_vh4ts")
