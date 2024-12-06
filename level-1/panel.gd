@@ -26,7 +26,15 @@ func _process(delta: float) -> void:
 
 func stop() -> void:
 	set_process(false)
-	# Perform any action when the countdown ends
+	'''
+	match MainUICanvasLayer.current_level:
+		0:
+			MainUICanvasLayer.is_reload = 0
+		1:
+			MainUICanvasLayer.is_reload = 1
+		2:
+			MainUICanvasLayer.is_reload = 2
+	'''
 	get_tree().reload_current_scene()  # Example action: Reload current scene
 
 func get_time_formatted() -> String:

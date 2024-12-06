@@ -1,4 +1,5 @@
 extends CanvasLayer
+class_name MainUICanvasLayer
 
 const LEVEL_0 = preload("res://Scenes/level_0_game_scene.tscn")
 const LEVEL_1 = preload("res://Scenes/level_1_livingroom.tscn")
@@ -28,6 +29,9 @@ var level_progress = 1
 const SAVE_FILE = "user://save_data.txt"
 const PROGRESS_FILE = "user://level_progress.txt"
 
+# static var is_reload : int = -1
+# static var current_level : int = 0
+
 func _ready() -> void:
 	load_level_progress()
 	update_level_buttons()
@@ -40,6 +44,26 @@ func _ready() -> void:
 	get_tree().paused = true
 	
 	map_menu_button.get_popup().connect("id_pressed", _on_map_menu_item_pressed)
+	
+''' dont have enough time to implement
+	if is_reload != -1 :
+		print(is_reload)
+		if is_reload == 0:
+			call_deferred("_on_level_0_button_pressed")	
+			is_reload = false
+			
+		if is_reload == 1:
+			call_deferred("_on_level_1_button_pressed()")
+			is_reload = false
+		
+		if is_reload == 2:
+			call_deferred("_on_level_2_button_pressed()")
+			is_reload = false
+		
+		if is_reload == 3:
+			call_deferred("_on_level_3_button_pressed()")
+			is_reload = false
+'''		
 
 func clear_progress_file() -> void:
 	if FileAccess.file_exists(PROGRESS_FILE):
@@ -166,6 +190,7 @@ func _on_level_0_button_pressed() -> void:
 	print("level 0")
 	game_scene = LEVEL_0.instantiate()
 	get_parent().add_child(game_scene)
+	# current_level = 0
 	map_menu.hide()
 	main_menu.hide()
 	
@@ -175,6 +200,7 @@ func _on_level_1_button_pressed() -> void:
 	print("level 1")
 	game_scene = LEVEL_1.instantiate()
 	get_parent().add_child(game_scene)
+	# current_level = 1
 	total_resets += 1
 	save_reset_count()
 	update_total_times_played_label()
@@ -187,6 +213,7 @@ func _on_level_2_button_pressed() -> void:
 	print("level 2")
 	game_scene = LEVEL_2.instantiate()
 	get_parent().add_child(game_scene)
+	# current_level = 2
 	total_resets += 1
 	save_reset_count()
 	update_total_times_played_label()
@@ -199,6 +226,7 @@ func _on_level_3_button_pressed() -> void:
 	print("level 3")
 	game_scene = LEVEL_3.instantiate()
 	get_parent().add_child(game_scene)
+	# current_level = 3
 	total_resets += 1
 	save_reset_count()
 	update_total_times_played_label()

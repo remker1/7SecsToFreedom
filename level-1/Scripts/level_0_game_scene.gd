@@ -14,4 +14,5 @@ func _process(delta: float) -> void:
 
 func _on_player_won() -> void:
 	print("Player Won")
+	 # MainUICanvasLayer.is_reload = 1
 	get_tree().reload_current_scene()

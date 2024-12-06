@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 BackgroundMusic="*res://Scenes/background_music.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+
 [input]
 
 Quit={

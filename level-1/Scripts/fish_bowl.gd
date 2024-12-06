@@ -9,7 +9,16 @@ const JUMP_VELOCITY = -400.0
 
 var has_played_death_noise = false
 
-func _handle_fall_death(): # Wait for the sound to finish
+func _handle_fall_death():
+	'''
+	match MainUICanvasLayer.current_level:
+		0:
+			MainUICanvasLayer.is_reload = 0
+		1:
+			MainUICanvasLayer.is_reload = 1
+		2:
+			MainUICanvasLayer.is_reload = 2
+	'''
 	get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:

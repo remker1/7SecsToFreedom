@@ -97,6 +97,8 @@ func switch_to_next_scene() -> void:
 		
 func reload_scene():
 	if get_tree():
+		#if MainUICanvasLayer.current_level == 3:
+			#MainUICanvasLayer.is_reload = 3
 		get_tree().reload_current_scene()
 
 

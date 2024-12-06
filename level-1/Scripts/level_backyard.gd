@@ -63,6 +63,7 @@ func _on_player_won() -> void:
 	load_level_progress()
 	level_progress += 1
 	save_level_progress()
+	
 	get_tree().reload_current_scene()
 
 

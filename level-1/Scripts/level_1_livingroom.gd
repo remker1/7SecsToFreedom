@@ -15,12 +15,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_player_won() -> void:
 	print("Player Won")
 	load_level_progress()
 	level_progress += 2
 	save_level_progress()
+	# MainUICanvasLayer.is_reload = 2
 	get_tree().reload_current_scene()
 
 
