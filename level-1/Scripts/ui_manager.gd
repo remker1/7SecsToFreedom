@@ -4,6 +4,7 @@ const LEVEL_0 = preload("res://Scenes/level_0_game_scene.tscn")
 const LEVEL_1 = preload("res://Scenes/level_1_livingroom.tscn")
 const LEVEL_2 = preload("res://Scenes/level_backyard.tscn")
 const LEVEL_3 = preload("res://level-3/level_3_game_scene.tscn")
+
 signal level_number(current_level:int)
 
 var game_scene : Node2D

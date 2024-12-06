@@ -1,8 +1,6 @@
 extends Area2D
 
-
 signal player_won
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,6 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("player won")
 	emit_signal("player_won")
 	

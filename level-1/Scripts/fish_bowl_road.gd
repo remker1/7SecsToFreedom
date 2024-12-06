@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var map_menu: Control = $UICanvas/MapMenu
+
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 @onready var animation = $AnimatedSprite2D
@@ -10,7 +12,7 @@ var spawn_time = 0.0
 
 var is_dead = false  # Tracks if the player is already dead
 
-@export var next_level_scene: String = "res://Scenes/level_0_game_scene.tscn"
+@export var next_level_scene: String = "res://Scenes/main.tscn"
 
 func _physics_process(delta: float) -> void:
 	if is_dead:  # If the player is dead, skip further processing

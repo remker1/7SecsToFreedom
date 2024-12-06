@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://eo5d465grok0"]
+[gd_scene load_steps=11 format=4 uid="uid://eo5d465grok0"]
 
 [ext_resource type="Texture2D" uid="uid://bd30t7sdmb68d" path="res://Assets/background-1.png" id="1_rrpyv"]
 [ext_resource type="PackedScene" uid="uid://cd6en602ehxvv" path="res://Scenes/fish_bowl_player.tscn" id="2_yoq6n"]
 [ext_resource type="Script" path="res://Scripts/panel.gd" id="3_wbedp"]
+[ext_resource type="Script" path="res://Scripts/fish_bowl.gd" id="4_eda58"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iec6f"]
 texture = ExtResource("1_rrpyv")
@@ -6172,16 +6173,8 @@ scale = Vector2(3.91844, 1.12544)
 script = ExtResource("3_wbedp")
 metadata/_edit_use_anchors_ = true
 
-<<<<<<< HEAD
-[node name="Minutes" type="Label" parent="FishBowl/CanvasLayer/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.0143998
-anchor_right = -0.0143998
-=======
 [node name="Minutes" type="Label" parent="CanvasLayer2/Panel"]
 layout_mode = 0
->>>>>>> a86cb789a4aa5d5574c8bdfc4641909cfba8053d
 offset_left = 1.0
 offset_right = 41.0
 offset_bottom = 23.0
@@ -6198,16 +6191,8 @@ scale = Vector2(0.405653, 1.12277)
 text = "00."
 metadata/_edit_use_anchors_ = true
 
-<<<<<<< HEAD
-[node name="Msecs" type="Label" parent="FishBowl/CanvasLayer/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.00966195
-anchor_right = -0.00966195
-=======
 [node name="Msecs" type="Label" parent="CanvasLayer2/Panel"]
 layout_mode = 0
->>>>>>> a86cb789a4aa5d5574c8bdfc4641909cfba8053d
 offset_left = 21.0
 offset_right = 61.0
 offset_bottom = 23.0
@@ -6218,3 +6203,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="FishBowl" parent="." instance=ExtResource("2_yoq6n")]
 position = Vector2(152, 107)
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("4_eda58")

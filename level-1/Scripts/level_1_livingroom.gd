@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_player_won() -> void:
+	print("Player Won")
 	get_tree().reload_current_scene()
-	pass

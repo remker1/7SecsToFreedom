@@ -21989,6 +21989,8 @@ tile_set = SubResource("TileSet_7ryae")
 
 [node name="FishBowl" parent="." instance=ExtResource("2_w3jej")]
 position = Vector2(198, 548)
+collision_layer = 7
+collision_mask = 7
 
 [node name="CanvasLayer" type="CanvasLayer" parent="FishBowl"]
 
@@ -22022,6 +22024,8 @@ offset_top = 1.77778
 offset_right = 86.2222
 offset_bottom = 24.7778
 text = "000"
+
+[node name="Camera2D" type="Camera2D" parent="FishBowl"]
 
 [node name="cat" parent="." instance=ExtResource("4_u84w0")]
 position = Vector2(790, 542)

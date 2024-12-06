@@ -1,6 +1,6 @@
 class_name Missile extends Node2D
 
-
+@onready var portal: Area2D = $Portal
 @onready var missiles = $Missiles
 @onready var FishBowl = $FishBowl
 @onready var death_noise: AudioStreamPlayer2D = $FishBowl/death_noise
@@ -14,6 +14,7 @@ func _ready() -> void:
 	for missile in missiles.get_children():
 		missile.connect("respawn", _spawn_missile)
 		missile.connect("player_body_hit", _on_play_death_sound)
+		portal.connect("player_won",_on_player_won)
 	
 	for spike in Spikes.get_children():
 		spike.connect("player_body_hit", _on_play_death_sound)
@@ -53,3 +54,7 @@ func _on_play_death_sound():
 func reload_scene():
 	if get_tree():  # Ensure the scene tree still exists
 		get_tree().reload_current_scene()
+
+func _on_player_won() -> void:
+	print("Player Won")
+	get_tree().reload_current_scene()
