@@ -11,6 +11,8 @@ const JUMP_VELOCITY = -400.0
 var spawn_time = 0.0
 
 var is_dead = false  # Tracks if the player is already dead
+var level_progress
+const PROGRESS_FILE = "user://level_progress.txt"
 
 @export var next_level_scene: String = "res://Scenes/main.tscn"
 
@@ -85,7 +87,10 @@ func die():
 		
 func switch_to_next_scene() -> void:
 	if next_level_scene != "":
-		print("Level completed!")
+		print("player Won")
+		load_level_progress()
+		level_progress += 1
+		save_level_progress()
 		get_tree().change_scene_to_file(next_level_scene)
 	else:
 		print("Next level scene is not set!")
@@ -93,3 +98,25 @@ func switch_to_next_scene() -> void:
 func reload_scene():
 	if get_tree():
 		get_tree().reload_current_scene()
+
+
+func load_level_progress() -> void:
+	if FileAccess.file_exists(PROGRESS_FILE):
+		var file = FileAccess.open(PROGRESS_FILE, FileAccess.READ)
+		if file:
+			if not file.eof_reached():
+				level_progress = int(file.get_line())
+				print("Loaded level progress:", level_progress)
+			file.close()
+	else:
+		print("No progress file found. Defaulting to initial levels.")
+
+
+func save_level_progress() -> void:
+	var file = FileAccess.open(PROGRESS_FILE, FileAccess.WRITE)
+	if file:
+		file.store_line(str(level_progress))
+		print("Saved level progress:", level_progress)
+		file.close()
+	else:
+		print("Failed to open progress file for saving.")

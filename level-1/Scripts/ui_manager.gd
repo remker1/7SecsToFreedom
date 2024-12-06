@@ -14,11 +14,22 @@ var game_scene : Node2D
 @onready var map_menu_button: MenuButton = $MapMenu/MapMenuButton
 @onready var total_times_played_count: Label = $MapMenu/TotalTimesPlayedCount
 
+@onready var final_scene_button: TextureButton = $"MapMenu/Final Scene Button"
+@onready var level_3_button: TextureButton = $"MapMenu/Level 3 Button"
+@onready var level_2_button: TextureButton = $"MapMenu/Level 2 Button"
+@onready var level_1_button: TextureButton = $"MapMenu/Level 1 Button"
+@onready var level_0_button: TextureButton = $"MapMenu/Level 0 Button"
+
+
 
 var total_resets = 0
+var level_progress = 1
 const SAVE_FILE = "user://save_data.txt"
+const PROGRESS_FILE = "user://level_progress.txt"
 
 func _ready() -> void:
+	load_level_progress()
+	update_level_buttons()
 	load_reset_count()
 	update_total_times_played_label()
 	main_menu.show()
@@ -28,6 +39,29 @@ func _ready() -> void:
 	get_tree().paused = true
 	
 	map_menu_button.get_popup().connect("id_pressed", _on_map_menu_item_pressed)
+
+func clear_progress_file() -> void:
+	if FileAccess.file_exists(PROGRESS_FILE):
+		var file = FileAccess.open(PROGRESS_FILE, FileAccess.WRITE)
+		if file:
+			file.store_string("")  # Overwrite the file with an empty string
+			print("Save file contents cleared:", PROGRESS_FILE)
+			file.close()
+		else:
+			print("Failed to open save file for clearing:", PROGRESS_FILE)
+	else:
+		print("No save file to clear.")
+
+func load_level_progress() -> void:
+	if FileAccess.file_exists(PROGRESS_FILE):
+		var file = FileAccess.open(PROGRESS_FILE, FileAccess.READ)
+		if file:
+			if not file.eof_reached():
+				level_progress = int(file.get_line())
+				print("Loaded level progress:", level_progress)
+			file.close()
+	else:
+		print("No progress file found. Defaulting to initial levels.")
 
 func clear_save_file() -> void:
 	if FileAccess.file_exists(SAVE_FILE):
@@ -77,6 +111,7 @@ func _on_levels_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	clear_save_file()
+	clear_progress_file()
 	get_tree().quit()
 
 func _on_continue_pressed() -> void:
@@ -90,6 +125,7 @@ func _on_main_page_pressed() -> void:
 
 func _on_pulse_exit_pressed() -> void:
 	clear_save_file()
+	clear_progress_file()
 	get_tree().quit()
 
 func _on_map_pressed() -> void:
@@ -112,6 +148,7 @@ func _on_over_back_main_pressed() -> void:
 	main_menu.show()
 
 func _on_over_exit_pressed() -> void:
+	clear_progress_file()
 	clear_save_file()
 	get_tree().quit()
 
@@ -174,3 +211,11 @@ func _on_map_menu_item_pressed(id: int) -> void:
 			_on_over_back_main_pressed()
 		1:
 			_on_exit_pressed()
+
+
+func update_level_buttons() -> void:
+	level_0_button.disabled = false  # Level 0 is always unlocked
+	level_1_button.disabled = false  # Level 1 is always unlocked
+	level_2_button.disabled = level_progress < 2
+	level_3_button.disabled = level_progress < 3
+	final_scene_button.disabled = level_progress < 4

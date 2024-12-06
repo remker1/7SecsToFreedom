@@ -7,6 +7,9 @@ class_name Missile extends Node2D
 @onready var Spikes = $Spikes
 var spawn_timer = 0.0 
 
+var level_progress
+const PROGRESS_FILE = "user://level_progress.txt"
+
 var missile_scene = preload("res://Scenes/missile.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -57,4 +60,30 @@ func reload_scene():
 
 func _on_player_won() -> void:
 	print("Player Won")
+	load_level_progress()
+	level_progress += 1
+	save_level_progress()
 	get_tree().reload_current_scene()
+
+
+func load_level_progress() -> void:
+	if FileAccess.file_exists(PROGRESS_FILE):
+		var file = FileAccess.open(PROGRESS_FILE, FileAccess.READ)
+		if file:
+			if not file.eof_reached():
+				level_progress = int(file.get_line())
+				print("Loaded level progress:", level_progress)
+			file.close()
+	else:
+		print("No progress file found. Defaulting to initial levels.")
+		level_progress = 1  # Default to level 0 and 1 unlocked
+
+
+func save_level_progress() -> void:
+	var file = FileAccess.open(PROGRESS_FILE, FileAccess.WRITE)
+	if file:
+		file.store_line(str(level_progress))
+		print("Saved level progress:", level_progress)
+		file.close()
+	else:
+		print("Failed to open progress file for saving.")
