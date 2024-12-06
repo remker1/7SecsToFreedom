@@ -19,6 +19,7 @@ var game_scene : Node2D
 @onready var level_2_button: TextureButton = $"MapMenu/Level 2 Button"
 @onready var level_1_button: TextureButton = $"MapMenu/Level 1 Button"
 @onready var level_0_button: TextureButton = $"MapMenu/Level 0 Button"
+@onready var f_inished_in_tries: Label = $GameOverMenu/Panel/CenterContainer/VBoxContainer/FInishedInTries
 
 
 
@@ -76,8 +77,8 @@ func clear_save_file() -> void:
 		print("No save file to clear.")
 
 func update_total_times_played_label() -> void:
-	print(total_times_played_count.text)
 	total_times_played_count.text = "Total Times Played: %d" % total_resets
+	f_inished_in_tries.text = "You have finished the game in %d tries!" % total_resets
 
 func save_reset_count() -> void:
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
@@ -93,16 +94,14 @@ func load_reset_count() -> void:
 	if file:
 		if not file.eof_reached():
 			total_resets = int(file.get_line())
-			print(total_resets)
 		file.close()
 
 func _on_start_pressed() -> void:
 	load_reset_count()
+	print("--------------------------------")
+	print("level 0")
 	game_scene = LEVEL_0.instantiate()
 	get_parent().add_child(game_scene)
-	total_resets += 1
-	update_total_times_played_label()
-	save_reset_count()
 	main_menu.hide()
 	get_tree().paused = false
 
@@ -162,18 +161,17 @@ func _on_final_scene_button_pressed() -> void:
 	game_over_menu.show()
 	
 func _on_level_0_button_pressed() -> void:
-	load_reset_count()
+
+	print("--------------------------------")
 	print("level 0")
 	game_scene = LEVEL_0.instantiate()
 	get_parent().add_child(game_scene)
-	total_resets += 1
-	save_reset_count()
-	update_total_times_played_label()
 	map_menu.hide()
 	main_menu.hide()
 	
 func _on_level_1_button_pressed() -> void:
 	load_reset_count()
+	print("--------------------------------")
 	print("level 1")
 	game_scene = LEVEL_1.instantiate()
 	get_parent().add_child(game_scene)
@@ -185,6 +183,7 @@ func _on_level_1_button_pressed() -> void:
 
 func _on_level_2_button_pressed() -> void:
 	load_reset_count()
+	print("--------------------------------")
 	print("level 2")
 	game_scene = LEVEL_2.instantiate()
 	get_parent().add_child(game_scene)
@@ -196,6 +195,7 @@ func _on_level_2_button_pressed() -> void:
 
 func _on_level_3_button_pressed() -> void:
 	load_reset_count()
+	print("--------------------------------")
 	print("level 3")
 	game_scene = LEVEL_3.instantiate()
 	get_parent().add_child(game_scene)

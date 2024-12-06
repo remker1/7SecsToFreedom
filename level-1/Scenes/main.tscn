@@ -187,10 +187,10 @@ grow_vertical = 2
 layout_mode = 2
 alignment = 1
 
-[node name="Thanks" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+[node name="FInishedInTries" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
-text = "Thank you for playing"
+text = "You have finished the game in %d tries!"
 horizontal_alignment = 1
 
 [node name="OverBackMain" type="Button" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
