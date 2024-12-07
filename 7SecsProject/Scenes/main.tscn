@@ -1,0 +1,389 @@
+[gd_scene load_steps=9 format=3 uid="uid://b88y6pjab26jk"]
+
+[ext_resource type="Script" path="res://Scripts/ui_manager.gd" id="1_a2t6h"]
+[ext_resource type="Texture2D" uid="uid://djwna84tm8hf8" path="res://Assets/MainMenuImage.jpg" id="2_ftfi0"]
+[ext_resource type="Texture2D" uid="uid://bn1qu02fuk23h" path="res://Assets/HomePage.png" id="2_n2mrr"]
+[ext_resource type="Texture2D" uid="uid://wnt4c1u15ory" path="res://Assets/Buttons/ButtonNormal.png" id="3_43uqx"]
+[ext_resource type="Texture2D" uid="uid://dkgwbul2nfmri" path="res://Assets/FinImage.jpg" id="3_pbo60"]
+[ext_resource type="Texture2D" uid="uid://rqbblsxu2gad" path="res://Assets/Buttons/ButtonClicked.png" id="4_0jlap"]
+[ext_resource type="Texture2D" uid="uid://c6wbjdi6fdfxf" path="res://Assets/Buttons/ButtonHovered.png" id="5_rfg6f"]
+[ext_resource type="Texture2D" uid="uid://c5rf6ua7uouf2" path="res://Assets/Buttons/menu (1).png" id="6_hj8lj"]
+
+[node name="Main" type="Node2D"]
+
+[node name="UICanvas" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("1_a2t6h")
+
+[node name="MainMenu" type="Control" parent="UICanvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UICanvas/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ftfi0")
+
+[node name="Panel" type="Panel" parent="UICanvas/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GroupInfo" type="Label" parent="UICanvas/MainMenu/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -217.0
+offset_top = -101.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 6
+text = "Made by CMPT306 Group 30
+Abdul - dpu196
+Gavin - gsc565
+Leo - wni817"
+horizontal_alignment = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UICanvas/MainMenu/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UICanvas/MainMenu/Panel/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GameTitle" type="Label" parent="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "7SecsToFreedom"
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[node name="Levels" type="Button" parent="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Levels"
+
+[node name="Exit" type="Button" parent="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
+[node name="Label2" type="Label" parent="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Try not to die!
+"
+horizontal_alignment = 1
+
+[node name="PulseMenu" type="Control" parent="UICanvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UICanvas/PulseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UICanvas/PulseMenu/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UICanvas/PulseMenu/Panel/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Continue" type="Button" parent="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Continue Game"
+
+[node name="Map" type="Button" parent="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Level Selection
+"
+
+[node name="MainPage" type="Button" parent="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Back to Main Page"
+
+[node name="PulseExit" type="Button" parent="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Exit Game"
+
+[node name="GameOverMenu" type="Control" parent="UICanvas"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UICanvas/GameOverMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_pbo60")
+
+[node name="Panel" type="Panel" parent="UICanvas/GameOverMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UICanvas/GameOverMenu/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UICanvas/GameOverMenu/Panel/CenterContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="FInishedInTries" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "You have finished the game in %d tries!"
+horizontal_alignment = 1
+
+[node name="OverBackMain" type="Button" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[node name="OverExit" type="Button" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
+[node name="Label1" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "CMPT306 Group30"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "With your gentle guidance, the fish dives into the endless blue, its scales catching shards of sunlight as it weaves through the ocean’s embrace—each flick of its tail a symphony of defiance, each ripple an anthem of untamed freedom, carving its path through boundless horizons."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="MapMenu" type="Control" parent="UICanvas"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundMap" type="TextureRect" parent="UICanvas/MapMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_n2mrr")
+expand_mode = 1
+
+[node name="Final Scene Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 588.0
+offset_right = 347.0
+offset_bottom = 657.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="LevelFin" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 605.0
+offset_right = 317.0
+offset_bottom = 654.0
+text = "Level Fin
+Ocean"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 3 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 465.0
+offset_right = 1016.0
+offset_bottom = 534.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level3" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 484.0
+offset_right = 989.0
+offset_bottom = 533.0
+text = "Level 3
+Road"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 2 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 113.0
+offset_right = 874.0
+offset_bottom = 182.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level2" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 777.0
+offset_top = 56.0
+offset_right = 849.0
+offset_bottom = 105.0
+text = "Level 2
+Backyard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 1 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 289.0
+offset_right = 731.0
+offset_bottom = 358.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level1" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 306.0
+offset_right = 718.0
+offset_bottom = 355.0
+text = "Level 1
+LivingRoom"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level 0 Button" type="TextureButton" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 98.0
+offset_right = 635.0
+offset_bottom = 167.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_43uqx")
+texture_pressed = ExtResource("4_0jlap")
+texture_hover = ExtResource("5_rfg6f")
+stretch_mode = 0
+
+[node name="Level0" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 115.0
+offset_right = 614.0
+offset_bottom = 164.0
+text = "Level 0
+Kitchen"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[node name="MapMenuButton" type="MenuButton" parent="UICanvas/MapMenu"]
+layout_mode = 1
+offset_left = 1096.0
+offset_top = 4.0
+offset_right = 1616.0
+offset_bottom = 524.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("6_hj8lj")
+text_overrun_behavior = 1
+clip_text = true
+switch_on_hover = true
+item_count = 2
+popup/item_0/text = "Main Menu"
+popup/item_1/text = "Exit"
+popup/item_1/id = 1
+
+[node name="TotalTimesPlayedCount" type="Label" parent="UICanvas/MapMenu"]
+layout_mode = 0
+offset_top = 626.0
+offset_right = 147.0
+offset_bottom = 649.0
+text = "Total Times Played: "
+
+[connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Start" to="UICanvas" method="_on_start_pressed"]
+[connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Levels" to="UICanvas" method="_on_levels_pressed"]
+[connection signal="pressed" from="UICanvas/MainMenu/Panel/CenterContainer/VBoxContainer/Exit" to="UICanvas" method="_on_exit_pressed"]
+[connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/Continue" to="UICanvas" method="_on_continue_pressed"]
+[connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/Map" to="UICanvas" method="_on_map_pressed"]
+[connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/MainPage" to="UICanvas" method="_on_main_page_pressed"]
+[connection signal="pressed" from="UICanvas/PulseMenu/Panel/CenterContainer/VBoxContainer/PulseExit" to="UICanvas" method="_on_pulse_exit_pressed"]
+[connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverBackMain" to="UICanvas" method="_on_over_back_main_pressed"]
+[connection signal="pressed" from="UICanvas/GameOverMenu/Panel/CenterContainer/VBoxContainer/OverExit" to="UICanvas" method="_on_over_exit_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Final Scene Button" to="UICanvas" method="_on_final_scene_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 3 Button" to="UICanvas" method="_on_level_3_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 2 Button" to="UICanvas" method="_on_level_2_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 1 Button" to="UICanvas" method="_on_level_1_button_pressed"]
+[connection signal="pressed" from="UICanvas/MapMenu/Level 0 Button" to="UICanvas" method="_on_level_0_button_pressed"]
+[connection signal="toggled" from="UICanvas/MapMenu/MapMenuButton" to="UICanvas" method="_on_map_menu_button_toggled"]

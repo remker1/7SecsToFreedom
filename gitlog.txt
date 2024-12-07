@@ -1,3 +1,327 @@
+commit c5648e1732016f1887450dcc37cf3e82dca7396a
+Author: Leo Liu <wni817@usask.ca>
+Date:   Fri Dec 6 16:53:10 2024 -0600
+
+    With help from Professor, now game is able to scale. We tried resetting the game to it's own scene, but it doesnt seem to be implementable before due time. We will keep the original
+
+commit 8a8f0962e513c960eafdbbe751c28090fab7d787
+Author: Leo Liu <wni817@usask.ca>
+Date:   Fri Dec 6 04:44:03 2024 -0600
+
+    gitlog updated
+
+commit a77e46dfa5c7afdb12dd0a0a5e1d0449c5e74a92
+Author: Leo Liu <wni817@usask.ca>
+Date:   Fri Dec 6 04:42:01 2024 -0600
+
+    all documentations are converted into .txt files. basic files are ready to be submitted.
+
+commit 4d55b402407b13946c5038952eb8f6cb348b71a1
+Author: Leo Liu <wni817@usask.ca>
+Date:   Fri Dec 6 04:00:40 2024 -0600
+
+    Game is now finished, ready for upload and film making
+
+commit 471d7be90ba55fed140ea14ba169ea1c8e07cdff
+Author: Leo Liu <wni817@usask.ca>
+Date:   Fri Dec 6 03:46:48 2024 -0600
+
+    Score system added, level unlock system added. will try to add Scoreboard.
+
+commit ad67f96346fe565a1d77444189a334576e5af0a5
+Author: Leo Liu <wni817@usask.ca>
+Date:   Fri Dec 6 02:40:04 2024 -0600
+
+    using local saving files, stores each time player played in the game. for replayability and compitition.
+
+commit 303ecb0fb431b7ee12e818a2abef7d0702a312a4
+Author: Leo Liu <wni817@usask.ca>
+Date:   Thu Dec 5 20:14:40 2024 -0600
+
+    minor bug fixes
+
+commit debb95f1c4427fa7b664f8c86a09ca7b47e4cd74
+Merge: 85cfe68 a86cb78
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Dec 5 18:24:19 2024 -0600
+
+    Merge level 3
+
+commit f02dcb9370aeeb6cdbb29c35534ff8e9432bef6e
+Author: Leo Liu <wni817@usask.ca>
+Date:   Thu Dec 5 17:54:34 2024 -0600
+
+    Yard_portal bus fixed.
+
+commit 4791216a934783fe422c0ada0554d5e3e3049d5e
+Author: Leo Liu <wni817@usask.ca>
+Date:   Thu Dec 5 17:36:31 2024 -0600
+
+    most bugs are fixed, game level 1 and 2 are connected. Game is now more complete.
+
+commit 85cfe688e170a16de312deb8c65b46fbb7c8ffe1
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Dec 5 16:20:40 2024 -0600
+
+    Changed the print statement after finishing the current level
+
+commit f0c717c71e27b42e6b14351911bb02bda95662e5
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Thu Dec 5 16:11:01 2024 -0600
+
+    Added car sound and cat sound, also fix the reset animation and sound
+
+commit 56215138a3a6c607a9c244d62cc83b44bb2157df
+Merge: bb6c993 66dc820
+Author: Leo Liu <wni817@usask.ca>
+Date:   Thu Dec 5 15:48:49 2024 -0600
+
+    updated from main branch, merging levels begin.
+
+commit bb6c993a556b346d84c80d12536f31a0e525bebd
+Author: Leo Liu <wni817@usask.ca>
+Date:   Thu Dec 5 03:56:59 2024 -0600
+
+    Level1 mostly finished, all connection to scenes are updated. ready for further developments
+
+commit 1f132c0cc16ee9b9ad7c1092542796219f45ad11
+Author: Gavin Caras <gavincaras@Gavins-MBP.gateway.sasktel.net>
+Date:   Wed Dec 4 20:48:55 2024 -0600
+
+    Added the ball enemy that bounces and hits the player and also added the next level scene when the player reaches the end of the screen
+
+commit a4f58e9f7600468a75a427139a65f06df85cbbde
+Author: Abdul Ismaeel (dpu196) <dpu196@mail.usask.ca>
+Date:   Wed Dec 4 14:29:28 2024 -0600
+
+    Revert "Merge branch 'ARBRANCH' into 'main'"
+    
+    This reverts merge request !29
+
+commit 6a078f908adabe78db51c8779b2eb59b0effece3
+Author: abdulrehman36 <123913847+abdulrehman36@users.noreply.github.com>
+Date:   Wed Dec 4 14:21:53 2024 -0600
+
+    after I pulled from main, forsome reason the portal was not working and some of the death scenes didnt work as expected so i changed that
+
+commit 3766b3530ffad4e681370fc178374c3982613a27
+Author: abdulrehman36 <123913847+abdulrehman36@users.noreply.github.com>
+Date:   Wed Dec 4 12:50:48 2024 -0600
+
+    added my new files
+
+commit c4139bc5b8e25644f508114321edd5c223fc6287
+Author: abdulrehman36 <123913847+abdulrehman36@users.noreply.github.com>
+Date:   Wed Dec 4 12:46:29 2024 -0600
+
+    I added all my new files i created
+
+commit bb885d835d1c2e9b8ff8f26d667e8719f653b3b1
+Merge: f159d7b 88cdb1b
+Author: abdulrehman36 <123913847+abdulrehman36@users.noreply.github.com>
+Date:   Wed Dec 4 12:26:22 2024 -0600
+
+    added
+
+commit f159d7b53abcdc42f39b1549bd08bbb719feff8b
+Author: abdulrehman36 <123913847+abdulrehman36@users.noreply.github.com>
+Date:   Wed Dec 4 12:19:28 2024 -0600
+
+    Replaced old level-1 folder with updated files
+
+commit dc128c5bd094a1d80d6593ecd781473e5d3d04d3
+Author: Gavin Caras <gavincaras@Gavins-MBP.gateway.sasktel.net>
+Date:   Wed Dec 4 02:31:23 2024 -0600
+
+    Added the Car enemy that speeds up and comes back and also added a tunnel to dodge the incoming car
+
+commit 01568feb4b1936d35c2620ece27603cc3b27ffb6
+Author: Leo Liu <wni817@usask.ca>
+Date:   Wed Dec 4 02:28:46 2024 -0600
+
+    Level1 living room is initiated, more progress will be inputed tomorrow
+
+commit f63c7b4bb975b97487348853191c077b745f19da
+Author: Leo Liu <wni817@usask.ca>
+Date:   Tue Dec 3 19:33:50 2024 -0600
+
+    updated positions
+
+commit 0b600af3032ba96d36b53aef1c20cdf9e66e29ae
+Author: Leo Liu <wni817@usask.ca>
+Date:   Tue Dec 3 19:29:52 2024 -0600
+
+    Added background images for main and end menu. total Death and total Time are added, but not configured.
+
+commit e6d26dfb5ff773e84fe11339a1b7e45e8b41ec77
+Author: Leo Liu <wni817@usask.ca>
+Date:   Tue Dec 3 18:16:23 2024 -0600
+
+    UI system updated, now All MainMenu, PulseMenu, GameOver Menu, Level Selection are done and connected. Buttons in MapMenu are connected to different levels(currently using level 0 as template). Game is functioning fine. Next Step, addin total death count, best time for each level to the Map Menu. Then Level 1 will begin progress.
+
+commit 37b5ff1d14cbcda64cec164f4e35cfd725d80f52
+Author: Leo Liu <wni817@usask.ca>
+Date:   Tue Dec 3 14:43:29 2024 -0600
+
+    Buttons are photoshoped, background image is created and added for the mapMenu(Level seleciton map). Button for linking the levels are getting worked on.
+
+commit 368fbbe635622889f3c3fb9c48a4805db7272371
+Author: Gavin Caras <gavincaras@Gavins-MBP.gateway.sasktel.net>
+Date:   Tue Dec 3 03:28:54 2024 -0600
+
+    Added the enemy cat ai that patrols and walks around
+
+commit 3c880c0084e9d9e0f219b5d8cc00348a92343d73
+Author: Gavin Caras <gavincaras@Gavins-MBP.gateway.sasktel.net>
+Date:   Tue Dec 3 01:53:48 2024 -0600
+
+    Added the canvas layer countdown timer for 7 secs
+
+commit 75ce689c2d2026c2415f211c30fa6b81247f7520
+Author: Gavin Caras <gavincaras@Gavins-MBP.gateway.sasktel.net>
+Date:   Tue Dec 3 01:27:14 2024 -0600
+
+    Added Canvas layer, background color, city background, and ground for collision
+
+commit 1799c618bf91b282c953ec228b37ab986cd98cf1
+Merge: 0adc87a c9f9b8f
+Author: Gavin Caras <gavincaras@Gavins-MBP.gateway.sasktel.net>
+Date:   Mon Dec 2 17:31:55 2024 -0600
+
+    Added cat animations
+
+commit 5f3a4d7a42ddcbe948e321780d3cab64a5fc7499
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Fri Nov 29 18:53:20 2024 -0600
+
+    Added level-3 inside level-1 folder
+
+commit d69e245af6ee14746f12d72f3bf42c2b75bca800
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Fri Nov 29 17:59:42 2024 -0600
+
+    Put the level-3 folder inside the level-1 folder
+
+commit a68c973e6999a746f53d6fffe237deee1cc47f29
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 17:51:10 2024 -0600
+
+    updates
+
+commit ec3332204a703f7394e961bd7346b1c4bea18e13
+Merge: 214b16f c9f9b8f
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 17:42:58 2024 -0600
+
+    Merge branch 'main' of https://git.cs.usask.ca/wni817/cmpt306gp
+
+commit 214b16fbe62b4f20040e67610ef95624c8347748
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 17:33:24 2024 -0600
+
+    restore local folder
+
+commit aadd4d5c74c501c0450172c2286cd3f74f9fcde7
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 16:51:42 2024 -0600
+
+    Old main is problematic, making LeoBranch new main and replacing old main
+
+commit 5e62f387124a194e296258dd7fd2128f63000c25
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 15:03:52 2024 -0600
+
+    relocating script files, and added main menu
+
+commit bc8406409fbb97fbfe3a842b561889a5d3496f74
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Fri Nov 29 16:18:38 2024 -0600
+
+    Created a level-3 folder
+
+commit c9f9b8f1e32cfa20e6a577eb8ae9dcbbe02391f4
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 16:12:04 2024 -0600
+
+    Main menu is made, Pulse Menu is made, Game Over Menu is made. Next step, make Level selection Menu.
+
+commit ddc1b557805d99b66f4545edcd06a559d14be17b
+Author: Gavin Caras <gavincaras@lm-08f8bc714bf2.dhcp.usask.ca>
+Date:   Fri Nov 29 16:04:31 2024 -0600
+
+    Added vehicle assets and it's animations
+
+commit f540f0dad07ceeafc88f03fb4e2473904cece5bf
+Author: Gavin Caras <gavincaras@Gavins-MacBook-Pro.local>
+Date:   Fri Nov 29 15:16:13 2024 -0600
+
+    Added the road level background
+
+commit 5bc405a6b2586e977bb45c2e1a29e7d1f7fbd442
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 15:09:07 2024 -0600
+
+    minor fixes
+
+commit 38f455d7ab3dea9db576f67e02c09806e76afe77
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Fri Nov 29 15:07:53 2024 -0600
+
+    Delete ._level-1
+
+commit 25cb697860e27608acc786379d779e5b55acdabb
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Fri Nov 29 15:07:47 2024 -0600
+
+    Delete ._.DS_Store
+
+commit 7b039eccbab0d016e402bdb164c7e7bb3d65bfac
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Fri Nov 29 15:07:39 2024 -0600
+
+    Delete .DS_Store
+
+commit ee8d4664821c480dbdb79bc837619c895623c5a2
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 15:03:52 2024 -0600
+
+    relocating script files, and added main menu
+
+commit fbd5396dcd7513e6fbf8816fb5fa4c4c0f43c4de
+Merge: fdc41bb 8efc5b6
+Author: arehman36 <dpu196@usask.ca>
+Date:   Fri Nov 29 15:03:05 2024 -0600
+
+    dsfsd
+
+commit fdc41bbd5ad4f5a653f0ffbb42a79d109e46ccae
+Author: abdulrehman36 <123913847+abdulrehman36@users.noreply.github.com>
+Date:   Fri Nov 29 14:43:43 2024 -0600
+
+    changes
+
+commit 102d68730a20323e078cc6b2e87f4f273f071513
+Merge: e1ed9f3 4409124
+Author: Leo Liu (wni817) <wni817@mail.usask.ca>
+Date:   Fri Nov 29 14:43:24 2024 -0600
+
+    Merge branch 'main' into 'LeoBranch'
+    
+    # Conflicts:
+    #   gitlog.txt
+
+commit fb0d8d9e9f000e77939bcb7d2f0398901d4c2998
+Author: Gavin Caras <gavincaras@Gavins-MacBook-Pro.local>
+Date:   Fri Nov 29 14:13:45 2024 -0600
+
+     Fixed the countdown timer from 0 to 7 secs to decrement from 7 seconds instead
+
+commit e1ed9f3e943b15a9008d9345c4cf178e326f4a2d
+Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
+Date:   Fri Nov 29 14:05:41 2024 -0600
+
+    update gitlog.txt to all branches.
+
 commit 329fe39c8be802bbcafba91ae564bc2f0001dae6
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
 Date:   Tue Nov 19 12:05:40 2024 -0600
@@ -31,12 +355,6 @@ Date:   Fri Nov 8 02:10:03 2024 -0600
     Milestone2 Complete
     
     See merge request wni817/cmpt306gp!21
-
-commit d2c0702748cf15bbc768c6845fa7db795f4f059e
-Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
-Date:   Fri Nov 8 02:07:24 2024 -0600
-
-    update gitlog file
 
 commit 1cb51790dea022e32f0519a6d963bcfed79a391c
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>
@@ -103,11 +421,11 @@ Date:   Thu Nov 7 18:57:49 2024 -0600
 
     Die machnism is implemented, new Animation for Idle, Move and Jump are added to the Assets folder.
 
-commit c4181d9a2550ab6b68b7a7a96111389567cc5543
-Author: Leo Liu (wni817) <wni817@mail.usask.ca>
-Date:   Thu Nov 7 16:27:06 2024 -0600
+commit 876b5314d83d640b9c8fadff92af87b9f1a9ac25
+Author: arehman36 <dpu196@usask.ca>
+Date:   Thu Nov 7 17:35:24 2024 -0600
 
-    Delete .DS_Store
+    made changes'
 
 commit c981ba5ac55d85d68f68fecfd825f9584ea31ca7
 Author: Sihan Liu <110271131+SushiWarrir@users.noreply.github.com>

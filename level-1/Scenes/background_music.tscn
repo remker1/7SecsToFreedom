@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://itrcwamqeciw"]
-
-[ext_resource type="AudioStream" uid="uid://bmvcpvdkg0a5c" path="res://Sounds/background.wav" id="1_mn3fv"]
-
-[node name="Background-Music" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_mn3fv")
-volume_db = -28.229
-autoplay = true
